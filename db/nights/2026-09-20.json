@@ -1,0 +1,976 @@
+{
+  "jobs": [
+    {
+      "board": "ashby",
+      "company": "Optro",
+      "description": "Who We Are Having surpassed $300M ARR and continuing to grow, Optro helps enterprises transform risk into opportunity through its AI-powered GRC Intelligence Platform. More than 50% of the Fortune 500, including 7 of the Fortune 10, leverage our award-winning technology to move their businesses forward with greater clarity and agility. And our customers love us: Optro is top-rated on G2.com http://G2.com and Gartner Peer Insights. At Optro, we inspire each other to innovate and are proud of what we are producing. We spend each day thinking of new ways… [Stack signals: TypeScript, React, Node, Python, PostgreSQL, fullstack]",
+      "location": "Canada",
+      "postedDate": "2026-09-16",
+      "rank": 1,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 225500,
+        "min": 164000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Node",
+        "Python",
+        "PostgreSQL",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer II (Full Stack), Analytics & Automation (Remote Canada)",
+      "url": "https://jobs.ashbyhq.com/optro/33d457f3-b68b-4676-8ce2-a84b741b2d01"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>Affirm is reinventing credit to make it more honest and friendly, giving consumers the flexibility to buy now and pay later without any hidden fees or compounding interest.</p> <p> </p> <p>Affirm is seeking a Senior Full Stack Software Engineer to join the Acquisition &amp; Onboarding team within the Consumer org. This is a high-impact… [Stack signals: TypeScript, React, Python, JavaScript, MySQL, fullstack]",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-29",
+      "rank": 2,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "JavaScript",
+        "MySQL",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer, Fullstack (Card Acquisition)   ",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7819656003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "<div class=\"content-intro\"><p><span style=\"font-family: arial, helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE: IOT) is the pioneer of the Connected Operations™ Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop actionable insights and improve their operations. At Samsara, we are helping improve the safety, efficiency and sustainability of the physical… [Stack signals: TypeScript, React, Python, JavaScript, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-07",
+      "rank": 3,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 212850,
+        "min": 154800
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "JavaScript",
+        "fullstack"
+      ],
+      "title": "Staff Software Engineer",
+      "url": "https://www.samsara.com/company/careers/roles/8115078?gh_jid=8115078"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "<div class=\"content-intro\"><p><span style=\"font-family: arial, helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE: IOT) is the pioneer of the Connected Operations™ Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop actionable insights and improve their operations. At Samsara, we are helping improve the safety, efficiency and sustainability of the physical… [Stack signals: TypeScript, React, Python, JavaScript, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-07",
+      "rank": 4,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 212850,
+        "min": 154800
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "JavaScript",
+        "fullstack"
+      ],
+      "title": "Staff Software Engineer",
+      "url": "https://www.samsara.com/company/careers/roles/8115102?gh_jid=8115102"
+    },
+    {
+      "board": "ashby",
+      "company": "1Password",
+      "description": "1Password is growing. We’ve surpassed $400M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing. About 1Password At 1Password, we’re building the foundation for a safe, productive digital future. Our mission is to unleash employee productivity without compromising security by ensuring every identity is authentic, every application sign-in is secure, and every device is trusted. We innovated the market-leading enterprise password manager… [Stack signals: TypeScript, React, Node, Python]",
+      "location": "Remote (United States | Canada)",
+      "postedDate": "2026-07-15",
+      "rank": 5,
+      "remote": true,
+      "salary": {
+        "currency": "USD",
+        "max": 214000,
+        "min": 144000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Node",
+        "Python"
+      ],
+      "title": "Senior Developer, Admin Workflows",
+      "url": "https://jobs.ashbyhq.com/1password/ea50a3a5-0dff-44d5-8611-9f874a54c4d7"
+    },
+    {
+      "board": "ashby",
+      "company": "Procurify",
+      "description": "SENIOR FULL STACK SOFTWARE ENGINEER ABOUT US Procurify is looking for a motivated, collaborative, and creative person who is passionate about technology. Procurify is the AI-enhanced procurement and AP automation platform for mid-market organizations. We make it easy for organizations to take control of spend and save money. We're looking for a pragmatic and thoughtful engineering leader to help scale our platform, development practices, and team. ABOUT THE ROLE You’re a person with a knack for solving some of the most pressing technology challenges in… [Stack signals: TypeScript, React, Python, MySQL, fullstack]",
+      "location": "Canada Remote",
+      "postedDate": "2026-09-02",
+      "rank": 6,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 155400,
+        "min": 128100
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "MySQL",
+        "fullstack"
+      ],
+      "title": "Senior Full Stack Engineer",
+      "url": "https://jobs.ashbyhq.com/procurify/fc0bb55c-22bc-4c9a-b9d2-5e8ef9f48389"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "<div class=\"content-intro\"><p><span style=\"font-family: arial, helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE: IOT) is the pioneer of the Connected Operations™ Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop actionable insights and improve their operations. At Samsara, we are helping improve the safety, efficiency and sustainability of the physical… [Stack signals: TypeScript, React, Python, JavaScript, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-14",
+      "rank": 7,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 184800,
+        "min": 142800
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "JavaScript",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer",
+      "url": "https://www.samsara.com/company/careers/roles/8130819?gh_jid=8130819"
+    },
+    {
+      "board": "lever",
+      "company": "Zensurance",
+      "description": "About Us: Zensurance is redefining commercial insurance for Canadian businesses. As a leading InsurTech, we make getting the right coverage simple, fast, and accessible through a digital-first experience. Our platform combines advanced technology with deep industry expertise to deliver tailored insurance solutions that help businesses thrive. Zensurance has been recognized for its rapid growth and industry impact: ✅ Deloitte’s Technology Fast 50 (2023, 2024, 2025) ✅ Deloitte’s Technology Fast 500 (2024, 2025) ✅ Top Insurance Employers (2022) At… [Stack signals: TypeScript, React, Node, PostgreSQL, NoSQL]",
+      "location": "Toronto, ON ; Toronto, ON",
+      "postedDate": "2026-08-06",
+      "rank": 8,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 145000,
+        "min": 115000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Node",
+        "PostgreSQL",
+        "NoSQL"
+      ],
+      "title": "Senior QA Software Developer (Remote First)",
+      "url": "https://jobs.lever.co/zensurance/f1935404-7e5e-43f9-8eca-af69250eb684"
+    },
+    {
+      "board": "ashby",
+      "company": "Jobber",
+      "description": "ARE YOU A BUILDER? Then Jobber might be the place for you! We're looking for a Senior Front-End Developer, Web Experimentation, to join our Web Strategy team. Jobber exists to help people in small businesses be successful. We work with small home service businesses, like your local plumbers, painters, and landscapers, to transform the way service is delivered through technology. With Jobber they can quote, schedule, invoice, and collect payments from their customers while providing an easy and professional customer experience. Running a small business… [Stack signals: TypeScript, React, Next.js, JavaScript, fullstack]",
+      "location": "Edmonton ; Vancouver ; Kitchener-Waterloo ; Toronto",
+      "postedDate": "2026-09-18",
+      "rank": 9,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "fullstack"
+      ],
+      "title": "Senior Front-End Developer, Web Experimentation",
+      "url": "https://jobs.ashbyhq.com/jobber/90826cae-5acc-4321-a0c7-206d9f7ea0b5"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Grafana Labs",
+      "description": "<div class=\"content-intro\"><p>Grafana Labs is the company behind Grafana Cloud, the fully managed observability platform trusted by more than 10,000 organizations to ensure reliability, resolve incidents faster, and optimize telemetry at scale. Built on open source and open standards and designed for interoperability across any stack, Grafana Cloud brings AI to observability and observability to AI, giving teams (and their agents) unified visibility so they can see, understand, and act on all their disparate data, wherever it lives, and move at the… [Stack signals: TypeScript, React, fullstack]",
+      "location": "Canada (Remote)",
+      "postedDate": "2026-07-31",
+      "rank": 10,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 197389,
+        "min": 164490
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "fullstack"
+      ],
+      "title": "Senior FullStack Engineer - Grafana Cloud Observability| Canada | Remote",
+      "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6130872004"
+    },
+    {
+      "board": "ashby",
+      "company": "Procurify",
+      "description": "Senior Frontend Software Engineer ABOUT US PROCURIFY IS THE AI-ENHANCED PROCUREMENT AND AP AUTOMATION PLATFORM FOR MID-MARKET ORGANIZATIONS. WE MAKE IT EASY FOR ORGANIZATIONS TO TAKE CONTROL OF SPEND AND SAVE MONEY. WE’RE LOOKING FOR A PRAGMATIC AND THOUGHTFUL ENGINEERING LEADER TO HELP SCALE OUR PLATFORM, DEVELOPMENT PRACTICES, AND TEAM. ABOUT THE ROLE Procurify is looking for a motivated, collaborative, and creative person who is passionate about technology. You’re a person with a knack for solving some of the most pressing technology challenges in… [Stack signals: TypeScript, React, Python]",
+      "location": "Canada Remote",
+      "postedDate": "2026-06-23",
+      "rank": 11,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 152000,
+        "min": 137000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python"
+      ],
+      "title": "Senior Frontend Engineer",
+      "url": "https://jobs.ashbyhq.com/procurify/df756341-fcc6-4b36-9f44-95ccc6239ebb"
+    },
+    {
+      "board": "ashby",
+      "company": "Cohere",
+      "description": "Who are we? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe that our work is instrumental to the widespread adoption of AI and we are looking for folks that want to be part of that. We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they… [Stack signals: React, Python, fullstack]",
+      "location": "Toronto ; Canada ; United States ; New York ; Montreal",
+      "postedDate": "2026-08-21",
+      "rank": 12,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 310000,
+        "min": 260000
+      },
+      "stackMatch": [
+        "React",
+        "Python",
+        "fullstack"
+      ],
+      "title": "Senior Full-Stack Engineer (Front-End Leaning), North Admin",
+      "url": "https://jobs.ashbyhq.com/cohere/c12e3636-ed16-47e7-ba1f-82860f88d340"
+    },
+    {
+      "board": "ashby",
+      "company": "Cohere",
+      "description": "Who are we? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe that our work is instrumental to the widespread adoption of AI and we are looking for folks that want to be part of that. We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they… [Stack signals: React, Python, fullstack]",
+      "location": "Toronto ; Canada ; London ; New York ; United Kingdom ; Montreal",
+      "postedDate": "2026-08-11",
+      "rank": 13,
+      "remote": true,
+      "salary": {
+        "currency": "USD",
+        "max": 220000,
+        "min": 150000
+      },
+      "stackMatch": [
+        "React",
+        "Python",
+        "fullstack"
+      ],
+      "title": "Senior Full-Stack Engineer, North Tools & Retrieval",
+      "url": "https://jobs.ashbyhq.com/cohere/6ebac60b-0758-4bb8-8299-44328d4926cb"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "About the role</strong></p> <p>Join Samsara's In-Vehicle Experience team as a Senior Software Engineer. You'll be the technical leader of the team, setting the direction for what we build and how. We are building AI voice experiences that speak to, coach, and assist drivers as they work, spanning proactive assistance, on-demand interaction, and the range of situations in between. We are looking for the product-minded full-stack engineer who will figure out what those experiences should be, ship them, and build the systems that let them evolve into one… [Stack signals: TypeScript, Python, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-07-24",
+      "rank": 14,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 184800,
+        "min": 142800
+      },
+      "stackMatch": [
+        "TypeScript",
+        "Python",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer II",
+      "url": "https://www.samsara.com/company/careers/roles/8083934?gh_jid=8083934"
+    },
+    {
+      "board": "ashby",
+      "company": "Vanta",
+      "description": "What you'll do as a Staff Software Engineer at Vanta: - Lead the migration of Vanta’s resource data model from a Mongo-centric solution to a schema-aware Postgres-backed solution and running both generations in parallel without breaking a customer integration. - Drive solutions across teams that you do not own but are dependent on the platform built by your team. - Design for correctness under eventual consistency with idempotent session handling, conditional writes that survive out-of-order delivery, reconciliation rather than strict cross-service… [Stack signals: TypeScript, Node, PostgreSQL, NoSQL]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-24",
+      "rank": 15,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "Node",
+        "PostgreSQL",
+        "NoSQL"
+      ],
+      "title": "Staff Software Engineer, Foundations Data Platform - CAN",
+      "url": "https://jobs.ashbyhq.com/vanta/a59302dc-b7ea-4bba-af3c-ddab91489848"
+    },
+    {
+      "board": "ashby",
+      "company": "Jobber",
+      "description": "DOES WORKING WITH DATA MOTIVATE AND EXCITE YOU? DO YOU WANT TO MAKE A DIFFERENCE CROSS FUNCTIONALLY? Then Jobber might be the place for you! We’re looking for a new Staff Data Engineer to join our Data Platform Team. Jobber exists to help people in small businesses be successful. We work with small home service businesses, like your local plumbers, painters, and landscapers, to transform the way service is delivered through technology. With Jobber they can quote, schedule, invoice, and collect payments from their customers, while providing an easy and… [Stack signals: TypeScript, React, GraphQL]",
+      "location": "Remote ; Vancouver ; Kitchener-Waterloo ; Edmonton ; Toronto",
+      "postedDate": "2026-09-16",
+      "rank": 16,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 228900,
+        "min": 169200
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "GraphQL"
+      ],
+      "title": "Staff Data Engineer ",
+      "url": "https://jobs.ashbyhq.com/jobber/12cc8a42-4e08-423d-803a-80a5972543b7"
+    },
+    {
+      "board": "ashby",
+      "company": "Jobber",
+      "description": "DO YOU WANT TO DEVELOP MORE THAN JUST A PRODUCT, WHILE LEADING DEV TEAMS TO VICTORY? DO YOU WANT TO LAYER AI INTO WORKFLOWS TO MAKE ENGINEER’S LIVES BETTER AND SAAS PRODUCTS STRONGER? Then Jobber might be the place for you! We’re looking for a Principal Software Engineer to be part of our Software Engineering team. At Jobber, we don’t just build a product - we work on real problems that help people in small businesses to become successful. We are inspired by our company values: be humble, be supportive and give a shit, which are not just said, but are… [Stack signals: TypeScript, React, GraphQL]",
+      "location": "Remote ; Vancouver ; Kitchener-Waterloo ; Edmonton ; Toronto",
+      "postedDate": "2026-09-01",
+      "rank": 17,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 265600,
+        "min": 196300
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "GraphQL"
+      ],
+      "title": "Principal Software Engineer",
+      "url": "https://jobs.ashbyhq.com/jobber/69f260d9-a2e6-4a0d-8c1d-4f9ec636bbdd"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>The Marketplace and App Experience domain is the main pillar of our core consumer strategy, driving the user journey across all of our frontend surfaces: iOS, Android, and Web. The teams span across multiple products and areas to engage and provide value to our customers, starting with the Home hub in the app or website, which expands… [Stack signals: TypeScript, React, JavaScript]",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-21",
+      "rank": 18,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 213000,
+        "min": 153000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "JavaScript"
+      ],
+      "title": "Senior Software Engineer, Frontend (App Experience)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7927799003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>App Infrastructure is the team behind Affirm's shared mobile app infrastructure — the platform every other mobile feature team builds on. We own the app’s shared components: design system, networking, observability, experimentation, CI/CD, app releases, developer tooling, availability/stability, and more. </p> <p>We care about… [Stack signals: TypeScript, React, JavaScript]",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-14",
+      "rank": 19,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 241000,
+        "min": 181000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "JavaScript"
+      ],
+      "title": "Staff Software Engineer, Mobile (App Infrastructure)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7829429003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>The Marketplace and App Experience domain is the main pillar of our core consumer strategy, driving the user journey across all of our frontend surfaces: iOS, Android, and Web. The teams span across multiple products and areas to engage and provide value to our customers, starting with the Home hub in the app or website, which expands… [Stack signals: TypeScript, React, JavaScript]",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-31",
+      "rank": 20,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 241000,
+        "min": 181000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "JavaScript"
+      ],
+      "title": "Staff Software Engineer, Frontend (App Experience)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7816193003"
+    },
+    {
+      "board": "lever",
+      "company": "Zensurance",
+      "description": "About Us: Zensurance is redefining commercial insurance for Canadian businesses. As a leading InsurTech, we make getting the right coverage simple, fast, and accessible through a digital-first experience. Our platform combines advanced technology with deep industry expertise to deliver tailored insurance solutions that help businesses thrive. Zensurance has been recognized for its rapid growth and industry impact: ✅ Deloitte’s Technology Fast 50 (2023, 2024, 2025) ✅ Deloitte’s Technology Fast 500 (2024, 2025) ✅ Top Insurance Employers (2022) At… [Stack signals: TypeScript, React, PostgreSQL]",
+      "location": "Toronto, ON ; Toronto, ON",
+      "postedDate": "2026-06-23",
+      "rank": 21,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 180000,
+        "min": 155000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "PostgreSQL"
+      ],
+      "title": "Staff Software Developer - Integration(Remote First)",
+      "url": "https://jobs.lever.co/zensurance/91404911-3d04-4659-ab83-7817e19a51e5"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>Trust &amp; Safety Experience owns the customer journeys during authentication, verification, and fraud journeys. You will work as a Frontend engineer, contributing to web, and mobile interfaces. In this role, you will need to gain a deep understanding of the business, product and engineering context, and utilize that context to own and… [Stack signals: TypeScript, React, JavaScript]",
+      "location": "Remote Canada",
+      "postedDate": "2026-09-10",
+      "rank": 22,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "JavaScript"
+      ],
+      "title": "Senior Software Engineer, Frontend (Auth Experiences)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7984716003"
+    },
+    {
+      "board": "ashby",
+      "company": "Jobber",
+      "description": "Jobber exists to help people in small businesses be successful. We work with small home service businesses, like your local plumbers, painters, and landscapers, to transform the way service is delivered through technology. With Jobber they can quote, schedule, invoice, and collect payments from their customers while providing an easy and professional customer experience. Running a small business today isn’t like it used to be—the way we consume and deliver service is changing rapidly, technology is evolving, and customers expect more. That’s why we put… [Stack signals: TypeScript, React, GraphQL]",
+      "location": "Edmonton ; Vancouver ; Kitchener-Waterloo ; Toronto",
+      "postedDate": "2026-06-25",
+      "rank": 23,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "GraphQL"
+      ],
+      "title": "Staff Software Engineer",
+      "url": "https://jobs.ashbyhq.com/jobber/d32bf400-95b3-4c75-96f6-2992beaf9863"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Grafana Labs",
+      "description": "<div class=\"content-intro\"><p>Grafana Labs is the company behind Grafana Cloud, the fully managed observability platform trusted by more than 10,000 organizations to ensure reliability, resolve incidents faster, and optimize telemetry at scale. Built on open source and open standards and designed for interoperability across any stack, Grafana Cloud brings AI to observability and observability to AI, giving teams (and their agents) unified visibility so they can see, understand, and act on all their disparate data, wherever it lives, and move at the… [Stack signals: TypeScript, React]",
+      "location": "Canada (Remote)",
+      "postedDate": "2026-09-16",
+      "rank": 24,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 223642,
+        "min": 186368
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React"
+      ],
+      "title": "Staff Frontend Engineer - Grafana DataViz | Canada | Remote",
+      "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6194971004"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p data-pm-slice=\"1 1 []\">As we build Affirm's advertising platform and evolve Marketplace into a best in class shopping destination, the ability to route and discover is one of the greatest levers for consumer experiences. Search is one of the highest impact surfaces, and we are building a new team that will own not just the… [Stack signals: React, Python, MySQL]",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-22",
+      "rank": 25,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 241000,
+        "min": 181000
+      },
+      "stackMatch": [
+        "React",
+        "Python",
+        "MySQL"
+      ],
+      "title": "Staff Software Engineer, Backend (Search)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7803080003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Brex",
+      "description": "<div class=\"content-intro\"><p><strong>Why join us</strong></p> <p>Brex is the intelligent finance platform that enables companies to spend smarter and move faster in more than 200 markets. By combining global corporate cards and banking with intuitive spend management, bill pay, and travel software, Brex enables founders and finance teams to accelerate operations, gain real-time visibility, and control spend effortlessly. Brex’s AI-native automation and world-class service eliminate manual expense and accounting tasks for customers so they can focus on… [Stack signals: TypeScript, React]",
+      "location": "Vancouver, British Columbia, Canada",
+      "postedDate": "2026-09-17",
+      "rank": 26,
+      "remote": false,
+      "stackMatch": [
+        "TypeScript",
+        "React"
+      ],
+      "title": "Senior Software Engineer, Frontend",
+      "url": "https://www.brex.com/careers/8815466002?gh_jid=8815466002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Gusto, Inc.",
+      "description": "<div class=\"content-intro\"><p style=\"line-height: 1.2;\"> </p> <hr> <p><strong>About Gusto</strong></p> <p>At Gusto, we're on a mission to grow the small business economy. We handle the hard stuff — payroll, health insurance, 401(k)s, and HR — so owners can focus on their craft and their customers. With teams in Denver, San Francisco, and New York, we support more than 500,000 small businesses nationwide and are building a workplace that reflects the people we serve.</p> <p> <br>All full-time employees receive competitive base pay, benefits, and equity… [Stack signals: React, JavaScript, fullstack]",
+      "location": "New York, NY - Hybrid; Toronto, Ontario - Remote",
+      "postedDate": "2026-08-03",
+      "rank": 27,
+      "remote": true,
+      "stackMatch": [
+        "React",
+        "JavaScript",
+        "fullstack"
+      ],
+      "title": "Staff Software Engineer, Time and Scheduling",
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/8077301"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Reddit",
+      "description": "<div class=\"content-intro\"><div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\"> <div class=\"c-message__message_blocks c-message__message_blocks--rich_text\" data-qa=\"message-text\"> <div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\"> <div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\"> <div class=\"p-rich_text_block\"> <div class=\"p-rich_text_section\">Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic… [Stack signals: Node, Python, JavaScript]",
+      "location": "Remote - British Columbia, Canada",
+      "postedDate": "2026-06-22",
+      "rank": 28,
+      "remote": true,
+      "stackMatch": [
+        "Node",
+        "Python",
+        "JavaScript"
+      ],
+      "title": "Senior Business Engineer - Ads",
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8022260"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Brex",
+      "description": "<div class=\"content-intro\"><p><strong>Why join us</strong></p> <p>Brex is the intelligent finance platform that enables companies to spend smarter and move faster in more than 200 markets. By combining global corporate cards and banking with intuitive spend management, bill pay, and travel software, Brex enables founders and finance teams to accelerate operations, gain real-time visibility, and control spend effortlessly. Brex’s AI-native automation and world-class service eliminate manual expense and accounting tasks for customers so they can focus on… [Stack signals: Python, NoSQL, fullstack]",
+      "location": "Vancouver, British Columbia, Canada",
+      "postedDate": "2026-09-16",
+      "rank": 29,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 240000,
+        "min": 192000
+      },
+      "stackMatch": [
+        "Python",
+        "NoSQL",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer, Backend",
+      "url": "https://www.brex.com/careers/8815519002?gh_jid=8815519002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Instacart",
+      "description": "<div class=\"content-intro\"><p><strong>We're transforming the grocery industry</strong></p> <p><span class=\"im\">At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe… [Stack signals: TypeScript, Python]",
+      "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+      "postedDate": "2026-09-15",
+      "rank": 30,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 207000,
+        "min": 196000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "Python"
+      ],
+      "title": "Senior Software Engineer II, Developer Experience",
+      "url": "https://instacart.careers/job/?gh_jid=8204016"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "About the role</strong></p> <p>The way software gets built is changing fast. AI agents are starting to write, review, and ship code alongside engineers — and our Developer Experience team sits right in the middle of figuring out what that actually looks like at Samsara.</p> <p>We build the tooling and infrastructure that Samsara's engineers use every day. Our \"customers\" are the people building the products that keep millions of workers safe and physical operations running. When we make their day better, every product team at Samsara benefits.</p>… [Stack signals: TypeScript, Python]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-05",
+      "rank": 31,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 212850,
+        "min": 154800
+      },
+      "stackMatch": [
+        "TypeScript",
+        "Python"
+      ],
+      "title": "Staff Software Engineer, DevEx",
+      "url": "https://www.samsara.com/company/careers/roles/8109358?gh_jid=8109358"
+    },
+    {
+      "board": "ashby",
+      "company": "Jobber",
+      "description": "Are you a seasoned production engineering professional who wants to work on a team that goes beyond the status quo? Then Jobber might be the place for you! We're looking for a Senior Site Reliability Engineer to be part of our Product Software Engineering team. Jobber exists to help people in small businesses be successful. We work with small home service businesses, like your local plumbers, painters, and landscapers, to transform the way service is delivered through technology. With Jobber they can quote, schedule, invoice, and collect payments from… [Stack signals: React, Python]",
+      "location": "Edmonton ; Vancouver ; Kitchener-Waterloo ; Toronto",
+      "postedDate": "2026-08-13",
+      "rank": 32,
+      "remote": true,
+      "stackMatch": [
+        "React",
+        "Python"
+      ],
+      "title": "Senior Site Reliability Engineer",
+      "url": "https://jobs.ashbyhq.com/jobber/193bbf38-576e-4f35-addc-cb16e3280e7c"
+    },
+    {
+      "board": "ashby",
+      "company": "Vanta",
+      "description": "At Vanta, our mission is to help businesses earn and prove trust. We believe that security should be monitored and verified continuously, and we empower companies to practice better security and prove it with ease. Vanta has a kind and talented team, and while some have prior security experience, many have been successful at Vanta without it. We are looking for a Senior Software Engineer to join our Product Platform org - the group that powers product development across Vanta by building the shared foundations that every engineering team builds on top… [Stack signals: TypeScript, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-11",
+      "rank": 33,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer, Product Platform",
+      "url": "https://jobs.ashbyhq.com/vanta/62945aae-55b0-4598-977a-b2dd00ec9081"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Instacart",
+      "description": "<div class=\"content-intro\"><p><strong>We're transforming the grocery industry</strong></p> <p><span class=\"im\">At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe… [Stack signals: Python, fullstack]",
+      "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+      "postedDate": "2026-09-15",
+      "rank": 34,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 190000,
+        "min": 180000
+      },
+      "stackMatch": [
+        "Python",
+        "fullstack"
+      ],
+      "title": "Senior Machine Learning Engineer, Ads Response Prediction",
+      "url": "https://instacart.careers/job/?gh_jid=7963840"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Later",
+      "description": "About the role: </strong></h2> <p>The <strong>Senior Engineer</strong> is responsible for driving large-scale projects, delivering impactful features, and maintaining high engineering standards. You’ll solve complex problems, collaborate across teams, and mentor junior engineers while continuously improving our codebases and fostering a culture of technical excellence. With deep expertise in modern software development and Agile practices, you’ll shape how we build, scale, and innovate—directly influencing product velocity and engineering culture.</p>… [Stack signals: TypeScript, PostgreSQL, NoSQL]",
+      "location": "Boston, MA; Vancouver, British Columbia, Canada; Vancouver, Washington, United States",
+      "postedDate": "2026-09-15",
+      "rank": 35,
+      "remote": false,
+      "salary": {
+        "currency": "USD",
+        "max": 125000,
+        "min": 110000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "PostgreSQL",
+        "NoSQL"
+      ],
+      "title": "Senior Engineer (Platform) ",
+      "url": "https://job-boards.greenhouse.io/later/jobs/8811513002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p> <p>The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members… [Stack signals: Python, JavaScript, GraphQL, PostgreSQL]",
+      "location": "Remote, Canada",
+      "postedDate": "2026-08-19",
+      "rank": 36,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "JavaScript",
+        "GraphQL",
+        "PostgreSQL"
+      ],
+      "title": "Senior Backend Engineer (Python), Agent Developer: Flow Components",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><div> <p>The Data and Storage Services team is responsible for Affirm's data infrastructure across OLTP and OLAP systems, spanning critical online checkout databases, batch orchestration, streaming infrastructure, event-driven frameworks, BI, analytics tooling, large-scale data platforms, and agentic data tools such as semantic layers and… [Stack signals: Python, PostgreSQL, MySQL, NoSQL]",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-10",
+      "rank": 37,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "PostgreSQL",
+        "MySQL",
+        "NoSQL"
+      ],
+      "title": "Staff Software Engineer, Backend (Online Storage) ",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7833952003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "<div class=\"content-intro\"><p><span style=\"font-family: arial, helvetica, sans-serif;\"><strong>Who we are</strong></span></p> <p><span style=\"font-weight: 300; font-family: arial, helvetica, sans-serif;\">Samsara (NYSE: IOT) is the pioneer of the Connected Operations™ Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop actionable insights and improve their operations. At Samsara, we are helping improve the safety, efficiency and sustainability of the physical… [Stack signals: Python, PostgreSQL, MySQL]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-06-24",
+      "rank": 38,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 154000,
+        "min": 119000
+      },
+      "stackMatch": [
+        "Python",
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "title": "Senior Data Engineer",
+      "url": "https://www.samsara.com/company/careers/roles/8025794?gh_jid=8025794"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p> <p>The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members… [Stack signals: Python, GraphQL, PostgreSQL]",
+      "location": "Remote, Canada; Remote, United Kingdom",
+      "postedDate": "2026-07-20",
+      "rank": 39,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "GraphQL",
+        "PostgreSQL"
+      ],
+      "title": "Senior Backend Engineer, AI Engineering: Chat   ",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8621733002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p> <p>The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members… [Stack signals: TypeScript]",
+      "location": "Remote, Canada; Remote, United States",
+      "postedDate": "2026-09-14",
+      "rank": 40,
+      "remote": true,
+      "salary": {
+        "currency": "USD",
+        "max": 235200,
+        "min": 139200
+      },
+      "stackMatch": [
+        "TypeScript"
+      ],
+      "title": "Senior Platform Engineer, GitLab Orbit",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8771527002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Samsara",
+      "description": "About the role:</strong></span></p> <p><span style=\"font-family: arial, helvetica, sans-serif;\">Our Diagnostics team takes real-time signals from our IoT devices deployed in vehicles (think: GPS, Engine RPM, Fuel Levels and hundreds more) and processes them to help our customers make their vehicle fleets safer, greener, and more efficient.</span></p> <p><span style=\"font-family: arial, helvetica, sans-serif;\">The Vehicle Intelligence firmware team is a cross-functional product engineering team that designs, develops, deploys, and maintains solutions… [Stack signals: GraphQL, fullstack]",
+      "location": "Remote - Canada",
+      "postedDate": "2026-08-13",
+      "rank": 41,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 184800,
+        "min": 142800
+      },
+      "stackMatch": [
+        "GraphQL",
+        "fullstack"
+      ],
+      "title": "Senior Software Engineer II",
+      "url": "https://www.samsara.com/company/careers/roles/8129161?gh_jid=8129161"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Instacart",
+      "description": "<div class=\"content-intro\"><p><strong>We're transforming the grocery industry</strong></p> <p><span class=\"im\">At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe… [Stack signals: Python, NoSQL]",
+      "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+      "postedDate": "2026-08-10",
+      "rank": 42,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 177500,
+        "min": 168000
+      },
+      "stackMatch": [
+        "Python",
+        "NoSQL"
+      ],
+      "title": "Senior Software Engineer, Marketing Platform Tooling",
+      "url": "https://instacart.careers/job/?gh_jid=8119683"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Asana",
+      "description": "<h1 data-path-to-node=\"7\">Senior Analytics Engineer</h1> <p id=\"p-rc_daf644fb847abe63-64\" data-path-to-node=\"8\"><span data-path-to-node=\"8,0\">The Data Science &amp; Analytics team at Asana is how the company turns data into decisions — defining the questions that matter, surfacing the answers, and making sure insight is at the center of every critical product and business call</span><span data-path-to-node=\"8,2\">. As a Senior Analytical Engineer, you sit at the intersection of Data Engineering, Analytics, and Data Science, and you own the data… [Stack signals: Node]",
+      "location": "Vancouver, BC",
+      "postedDate": "2026-08-07",
+      "rank": 43,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 120000,
+        "min": 106000
+      },
+      "stackMatch": [
+        "Node"
+      ],
+      "title": "Senior Analytics Engineer",
+      "url": "https://www.asana.com/jobs/apply/8075917?gh_jid=8075917"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "<div class=\"content-intro\"><p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the Fortune 100* trust GitLab to ship better, more secure software faster.</p> <p>The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members… [Stack signals: Python, PostgreSQL]",
+      "location": "Remote, Canada",
+      "postedDate": "2026-09-15",
+      "rank": 44,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "PostgreSQL"
+      ],
+      "title": "Senior Distribution Engineer, Gitlab: Build",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8802261002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "What you'll do</strong> </p> <ul> <li>You have 7+ years of experience designing, developing and launching backend systems at scale using languages like Python or Kotlin.</li> <li> <p>You have an extensive track record of developing highly available distributed systems using technologies like AWS, MySQL, Spark and Kubernetes.</p> </li> <li> <p>You have strong verbal and written communication skills that support effective collaboration with our global engineering team.</p> </li> <li> <p>You have experience delivering major features, system components or… [Stack signals: Python, MySQL]",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-12",
+      "rank": 45,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "MySQL"
+      ],
+      "title": "Staff CIAM Software Engineer",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7819451003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>Engineering owns cost visibility and optimization across Affirm's cloud and AI infrastructure. We're the team that tells the business what it's spending, why it's changing, and what to do about it — from AWS resource waste and tagging strategy to the newer frontier of AI/LLM spend across the company's growing set of AI tools. We treat… [Stack signals: Python, MySQL]",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-30",
+      "rank": 46,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "MySQL"
+      ],
+      "title": "Staff Software Engineer, Backend (Cost Engineering)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7821440003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "<div class=\"content-intro\"><p>At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.</p></div><p>The Ledger Engineering team enables rapid financial product innovation by providing an audit-grade ledger platform that ties ambitious company growth to a highly regulated industry's real-world accounting controls. We are passionate about building robust, fault-tolerant, highly scalable systems that enable us to be on-time and precisely… [Stack signals: Python, MySQL]",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-20",
+      "rank": 47,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "MySQL"
+      ],
+      "title": "Staff Software Engineer, Backend (Ledger Engineering)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7800319003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Faire",
+      "description": "<div class=\"content-intro\"><p><span style=\"font-weight: 400;\"><strong>About Faire</strong></span></p> <p>Faire is a technology wholesale platform built on the belief that the future is local. Independent retailers around the globe collectively represent a multi-hundred-billion-dollar wholesale market that has historically been fragmented and offline. At Faire, we're using the power of tech, data, and machine learning to connect this thriving community of entrepreneurs across the globe. Picture your favorite boutique in town — we help them discover the… [Stack signals: Python, MySQL]",
+      "location": "Kitchener-Waterloo, ON; Remote - Ontario; Toronto, ON",
+      "postedDate": "2026-07-02",
+      "rank": 48,
+      "remote": true,
+      "stackMatch": [
+        "Python",
+        "MySQL"
+      ],
+      "title": "Senior Staff Machine Learning Platform Engineer",
+      "url": "https://boards.greenhouse.io/faire/jobs/8618464002?gh_jid=8618464002"
+    },
+    {
+      "board": "ashby",
+      "company": "Perplexity",
+      "description": "ABOUT THE ROLE The Infrastructure team builds and operates the foundational systems behind Perplexity’s products. At Perplexity, infrastructure sits on the critical path of every answer, supporting real-time search, retrieval, model serving, and agent workloads where latency, reliability, and rapid iteration directly shape the user experience. This role is for strong infrastructure engineers whose experience spans multiple domains and who are energized by cross-cutting problems that do not fit neatly within a single platform team. You do not need to be… [Stack signals: Python]",
+      "location": "San Francisco ; London ; Austin ; Berlin ; Seattle ; New York City ; Toronto",
+      "postedDate": "2026-09-05",
+      "rank": 49,
+      "remote": true,
+      "salary": {
+        "currency": "USD",
+        "max": 405000,
+        "min": 220000
+      },
+      "stackMatch": [
+        "Python"
+      ],
+      "title": "Member of Technical Staff (General Software Engineer, Infrastructure)",
+      "url": "https://jobs.ashbyhq.com/perplexity/76c9b39f-aecc-4247-b5f5-ebcd02dff7c3"
+    },
+    {
+      "board": "ashby",
+      "company": "Cohere",
+      "description": "Who are we? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe that our work is instrumental to the widespread adoption of AI and we are looking for folks that want to be part of that. We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they… [Stack signals: Python]",
+      "location": "Canada ; United States",
+      "postedDate": "2026-09-03",
+      "rank": 50,
+      "remote": true,
+      "salary": {
+        "currency": "USD",
+        "max": 240000,
+        "min": 200000
+      },
+      "stackMatch": [
+        "Python"
+      ],
+      "title": "Senior Software Engineer, GPU Infrastructure (HPC)",
+      "url": "https://jobs.ashbyhq.com/cohere/ef9b939d-da66-464c-a878-ef45616c0473"
+    }
+  ],
+  "runAt": "2026-09-20T23:32:03+00:00",
+  "runDate": "2026-09-20",
+  "sourcesChecked": [
+    "greenhouse",
+    "ashby",
+    "lever",
+    "bamboohr"
+  ],
+  "stats": {
+    "fetched": 6921,
+    "qualified": 93
+  }
+}

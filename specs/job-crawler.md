@@ -34,11 +34,12 @@ A scheduled task runs nightly and updates the job board artifact with the top 50
 
 ## Seen jobs
 
-Jobs shown on earlier nights are saved in a separate small JSON-style store, keyed by job URL. Each run skips any URL already in it, then adds the new 50.
+Jobs shown on earlier nights are saved in a separate store, one document per job. Each run skips any URL already in it, then adds the new 50.
 
-- **Key:** job posting URL
-- **Value:** title, company, date first shown
-- **Location:** the job board's database, in seen/\<YYYY-MM> documents (see Job board data)
+- **Key:** job posting URL, hashed to a document id (first 32 hex characters of its SHA-256)
+- **Value:** the full URL, title, company, date first shown
+- **Location:** the job board's database, in seen/\<hash> documents (see Job board data)
+- Each run writes only the jobs it adds; earlier documents are never rewritten.
 
 ## Job cards
 
@@ -51,7 +52,7 @@ The board is published at [Nightly Fifty](https://claude.ai/artifact/XZCbzgNH52F
 
 - **nights/\<YYYY-MM-DD>** (one doc per run): `runDate`, `runAt` (ISO time), `sourcesChecked` (board names), `stats` {`fetched`, `qualified`}, `jobs` (array, ranked)
 - **Each job:** `rank`, `title`, `url` (required); `company`, `board`, `location`, `remote` (true/false), `postedDate` (YYYY-MM-DD), `salary` {`min`, `max`, `currency`}, `stackMatch` (list), `description` (max 1,200 chars)
-- **seen/\<YYYY-MM>** (one doc per month): a map keyed by job URL, value {`title`, `company`, `firstShown`}
+- **seen/\<hash>** (one doc per job; hash is the first 32 hex characters of the URL's SHA-256): `url`, `title`, `company`, `firstShown` (YYYY-MM-DD)
 - Only the owner or editors can write; the page shows the latest 30 nights.
 
 ## Spec rules
@@ -70,3 +71,5 @@ The board is published at [Nightly Fifty](https://claude.ai/artifact/XZCbzgNH52F
 - 2026-09-19: Created with goal, profile, automation and spec rules.
 - 2026-09-19: Resolved open questions: 6 PM year-round, title equivalents count, 50 new jobs nightly with a seen-jobs store keyed by URL, job card fields.
 - 2026-09-19: Published the job board and defined its data format.
+- 2026-09-20: Seen jobs moved from one document per month to one document per job, keyed by a hash of the URL. The monthly document was rewritten in full on every run, which grew to roughly 250 KB by month end and made concurrent runs collide on a single document; per-job documents mean a run writes only what it adds. Migrated the 72 existing entries and removed seen/2026-09.
+- 2026-09-20: Snapshot of the board database exported to db/ in this repository.

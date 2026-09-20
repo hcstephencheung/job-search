@@ -1,0 +1,345 @@
+{
+  "jobs": [
+    {
+      "board": "greenhouse",
+      "company": "Later",
+      "description": "Staff engineer on Later's influencer marketing platform leading large technical initiatives and mentoring. Stack: React, TypeScript, Node.js, MySQL/DynamoDB, AWS, Docker/Kubernetes. Hybrid; select roles fully remote.",
+      "location": "Vancouver, BC, Canada; Boston, MA; Vancouver, WA, US",
+      "postedDate": "2026-08-26",
+      "rank": 1,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 200000,
+        "min": 170000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "NoSQL"
+      ],
+      "title": "Staff Engineer (Product)",
+      "url": "https://job-boards.greenhouse.io/later/jobs/8750834002"
+    },
+    {
+      "board": "ashby",
+      "company": "Cohere",
+      "description": "Builds Cohere's internal applications. Stack: Next.js, TypeScript, React, Python, SQL. Listed as Toronto with a remote option.",
+      "location": "Toronto, ON, Canada (remote)",
+      "postedDate": "2026-09-15",
+      "rank": 2,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 310000,
+        "min": 215000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "React",
+        "Python",
+        "SQL"
+      ],
+      "title": "Senior Full-Stack Engineer, Internal Applications",
+      "url": "https://jobs.ashbyhq.com/cohere/7133d205-5421-4336-a8e2-6037b5f55073"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Architects the orchestration layer for GitLab's agentic AI platform. Stack: Ruby, Go, Python or TypeScript, distributed systems. Only a US pay range is posted, so no salary is recorded.",
+      "location": "Remote, Canada; Remote, Poland; Remote, United Kingdom; Remote, United States",
+      "postedDate": "2026-09-11",
+      "rank": 3,
+      "remote": true,
+      "stackMatch": [
+        "TypeScript",
+        "Python"
+      ],
+      "title": "Principal Engineer, Duo Agent Platform",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8786095002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Later",
+      "description": "Staff platform engineer architecting distributed shared services. Stack: C# (functional), TypeScript, PostgreSQL, Docker, Kubernetes, AWS. Hybrid with some remote options.",
+      "location": "Vancouver, BC, Canada; Boston, MA; Remote",
+      "postedDate": "2026-08-26",
+      "rank": 4,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 200000,
+        "min": 170000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "PostgreSQL"
+      ],
+      "title": "Staff Engineer (Platform)",
+      "url": "https://job-boards.greenhouse.io/later/jobs/8750809002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Later",
+      "description": "Senior platform engineer driving large-scale platform projects. Stack: C# (functional), TypeScript, PostgreSQL, Docker, Kubernetes, AWS. Hybrid.",
+      "location": "Vancouver, BC, Canada; Boston, MA; Vancouver, WA, US",
+      "postedDate": "2026-08-26",
+      "rank": 5,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 160000,
+        "min": 110000
+      },
+      "stackMatch": [
+        "TypeScript",
+        "PostgreSQL"
+      ],
+      "title": "Senior Engineer (Platform)",
+      "url": "https://job-boards.greenhouse.io/later/jobs/8750745002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Builds APIs that let partners and merchants integrate with Affirm payments. Stack: Python or Kotlin, AWS, MySQL, Kubernetes.",
+      "location": "Remote Canada",
+      "postedDate": "2026-09-09",
+      "rank": 6,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 213000,
+        "min": 153000
+      },
+      "stackMatch": [
+        "Python",
+        "MySQL"
+      ],
+      "title": "Senior Software Engineer, Backend (Partner Merchant Interface)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7832326003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Designs scalable backend systems and APIs for customer acquisition, engagement and lifecycle growth. Stack: Python or Kotlin, AWS, Kafka/Kinesis.",
+      "location": "Remote Canada",
+      "postedDate": "2026-09-14",
+      "rank": 7,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 213000,
+        "min": 153000
+      },
+      "stackMatch": [
+        "Python"
+      ],
+      "title": "Senior Software Engineer, Backend (Consumer Data Platform)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7989061003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "StackAdapt",
+      "description": "Designs high-scale, millisecond-latency programmatic bidding systems with ML engineers. Stack: Go, distributed systems, databases, applied ML. Remote.",
+      "location": "Canada; United States (remote)",
+      "postedDate": "2026-08-13",
+      "rank": 8,
+      "remote": true,
+      "salary": {
+        "currency": "CAD",
+        "max": 234300,
+        "min": 170400
+      },
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Creatives",
+      "url": "https://job-boards.greenhouse.io/stackadapt/jobs/4369386009"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Later",
+      "description": "Senior product engineer delivering large features across front end and back end and mentoring engineers. Posting does not name specific frameworks. Hybrid.",
+      "location": "Vancouver, BC, Canada; Boston, MA; Vancouver, WA, US",
+      "postedDate": "2026-08-26",
+      "rank": 9,
+      "remote": false,
+      "salary": {
+        "currency": "CAD",
+        "max": 160000,
+        "min": 110000
+      },
+      "stackMatch": [],
+      "title": "Senior Engineer (Product)",
+      "url": "https://job-boards.greenhouse.io/later/jobs/8750778002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Amplitude",
+      "description": "Sets architecture for Amplitude's developer platform: cloud dev environments, CI/CD and build systems for a polyglot codebase. Hybrid in Vancouver.",
+      "location": "Vancouver, BC, Canada",
+      "postedDate": "2026-09-14",
+      "rank": 10,
+      "remote": false,
+      "stackMatch": [],
+      "title": "Staff Software Engineer - DevX",
+      "url": "https://job-boards.greenhouse.io/amplitude/jobs/8806470002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Senior backend role on Affirm's Authentication Experience team, Remote Canada. Seen in the board listing only; stack and pay not checked.",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-26",
+      "rank": 11,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Backend (Authentication Experience)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7819891003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United Kingdom",
+      "postedDate": "2026-08-20",
+      "rank": 12,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer (Go), Tenant Scale: Gitaly",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8729451002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United States",
+      "postedDate": "2026-08-14",
+      "rank": 13,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer, AMER",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8715968002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United States",
+      "postedDate": "2026-08-10",
+      "rank": 14,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer (Ruby), Plan: Portfolio Experience",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8682707002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Senior backend role on Affirm's Batch Infrastructure team, Remote Canada. Seen in the board listing only; stack and pay not checked.",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-05",
+      "rank": 15,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Backend (Batch Infrastructure)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7785814003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United States",
+      "postedDate": "2026-08-05",
+      "rank": 16,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer, Architecture Engineering: Nonlinear Productivity",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8646556002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Senior backend role on Affirm's Reliability Platform team, Remote Canada. Seen in the board listing only; stack and pay not checked.",
+      "location": "Remote Canada",
+      "postedDate": "2026-08-04",
+      "rank": 17,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Backend (Reliability Platform)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7820308003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United States",
+      "postedDate": "2026-08-03",
+      "rank": 18,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer, Platform Readiness",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8644572002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Senior backend role on Affirm's ML Feature Platform team, Remote Canada. Seen in the board listing only; stack and pay not checked.",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-24",
+      "rank": 19,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Backend (ML Feature Platform)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7806924003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "Affirm",
+      "description": "Senior backend role on Affirm's PBA - Growth team, Remote Canada. Seen in the board listing only; stack and pay not checked.",
+      "location": "Remote Canada",
+      "postedDate": "2026-07-24",
+      "rank": 20,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Backend (PBA - Growth)",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7808386003"
+    },
+    {
+      "board": "greenhouse",
+      "company": "GitLab",
+      "description": "Senior backend role at GitLab (all-remote), open in Canada. Seen in the board listing only; stack beyond the title and pay not checked.",
+      "location": "Remote, Canada; Remote, United Kingdom",
+      "postedDate": "2026-07-21",
+      "rank": 21,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Backend Engineer, Deployment Environments",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8636713002"
+    },
+    {
+      "board": "greenhouse",
+      "company": "StackAdapt",
+      "description": "Leads third-party data integrations for ad targeting, reporting and attribution. Stack: Go, AWS, Kubernetes, Kafka, Snowflake, TiDB. Remote.",
+      "location": "Canada (Remote First - North America)",
+      "postedDate": "2026-06-26",
+      "rank": 22,
+      "remote": true,
+      "stackMatch": [],
+      "title": "Senior Software Engineer, Integrations",
+      "url": "https://job-boards.greenhouse.io/stackadapt/jobs/4296836009"
+    }
+  ],
+  "runAt": "2026-09-19T16:37:51+00:00",
+  "runDate": "2026-09-19",
+  "sourcesChecked": [
+    "greenhouse",
+    "lever",
+    "ashby",
+    "workday"
+  ],
+  "stats": {
+    "fetched": 580,
+    "qualified": 22
+  }
+}
