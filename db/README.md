@@ -14,6 +14,7 @@ at runtime, and editing these files changes nothing.
 db/
   nights/<YYYY-MM-DD>.json   one per run
   seen/<hash>.json           one per job ever shown
+  slugs/<slug>:<board>.json  one per company-board pair
 ```
 
 ## nights/&lt;YYYY-MM-DD&gt;
@@ -49,8 +50,24 @@ Before 2026-09-20 this was a single `seen/<YYYY-MM>` document holding a map keye
 URL. That shape was rewritten in full on every run — about 250 KB by the end of a month,
 and a collision point for concurrent runs — so it was migrated to one document per job.
 
+## slugs/&lt;slug&gt;:&lt;board&gt;
+
+One document per company-board pair, written by slug discovery before each crawl. The
+document id is the slug and the board joined by a colon, so `mejuri:greenhouse` — the
+pair is the key because the same slug can exist on more than one board.
+
+| Field | Notes |
+| --- | --- |
+| `slug` | the company's identifier on that board, as the endpoint takes it |
+| `jobBoard` | board name, matching the Sources table in the Algorithm spec |
+| `companyName` | the company's display name |
+
+The crawl reads this collection instead of guessing slugs, which is what produced 72 of
+the 76 board failures on 2026-09-20.
+
 ## Current contents
 
 - `nights/2026-09-19` — 22 jobs (seeding run)
 - `nights/2026-09-20` — 50 jobs, 6,921 postings fetched, 93 qualified
 - `seen/` — 72 documents, equal to the union of both nights
+- `slugs/` — empty; this snapshot predates the collection

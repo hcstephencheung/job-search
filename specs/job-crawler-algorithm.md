@@ -70,10 +70,22 @@ but that is a guess from a URL shape and needs the page source to confirm.
 
 ### Slug discovery
 
-The company list a run crawls is hand-maintained, and a wrong slug is indistinguishable
-from an outage: on 2026-09-20, 72 of 76 board failures were guessed slugs that returned
-404, while 4 were egress blocks. A run must therefore report each board's outcome
-separately — reached, 404, or unreachable — rather than a single list of sources checked.
+Slug discovery runs first, before every crawl. The company list is hand-maintained and a
+wrong slug is indistinguishable from an outage: on 2026-09-20, 72 of 76 board failures
+were guessed slugs that returned 404, while 4 were egress blocks.
+
+Each run, in order:
+
+1. **Discover.** Resolve every company under Company boards to its board and slug —
+   confirming pairs already in the slug table still answer, and resolving any company
+   that has no slug yet.
+2. **Store.** Write each confirmed pair to the slug table (see Job board data in the
+   main spec), keyed by `<slug>:<jobBoard>`.
+3. **Crawl.** Fetch postings only for pairs in the slug table. A slug that did not
+   resolve is never guessed at.
+
+A run reports each board's outcome separately — reached, 404, or unreachable — rather
+than a single list of sources checked.
 
 ## Disqualifiers
 
