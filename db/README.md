@@ -25,7 +25,8 @@ One document per run, written once when the run finishes.
 | --- | --- |
 | `runDate` | YYYY-MM-DD |
 | `runAt` | ISO timestamp of the run |
-| `sourcesChecked` | board names reached this run |
+| `boards` | one entry per slug-board pair: `slug`, `jobBoard`, `company`, `outcome` (reached, 404 or unreachable) and `postings` |
+| `discovery` | `candidates`, `resolved`, `notFound`, `unreachable` for the slug-discovery pass |
 | `stats.fetched` | postings pulled from all boards before filtering |
 | `stats.qualified` | postings surviving the disqualifiers, before the top-50 cut |
 | `jobs` | ranked array, at most 50 |

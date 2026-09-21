@@ -13,23 +13,35 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 
 | Platform | Endpoint | Posted date | Status |
 | --- | --- | --- | --- |
-| Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs`, then `/jobs/{id}` for detail | `first_published` (ISO 8601) | Working, confirmed in a run |
+| Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true` | `first_published` (ISO 8601) | Working, confirmed in a run |
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json` | `createdAt` (epoch milliseconds) | Working, confirmed in a run |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) | Working, confirmed in a run |
-| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Blocked by egress |
-| Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | Unconfirmed — Pinpoint's docs do not list posting fields | Blocked by egress |
-| BambooHR | Public JSON endpoints exist, URL unconfirmed | Unconfirmed; list API exposes no posted date | Blocked by egress |
-| Workday | `{org}.wd3.myworkdayjobs.com/{board}` | Rarely shown on postings, often only "30+ days ago" | Blocked by egress |
-| Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | Blocked by egress; recommend dropping |
+| Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `postedOn`, a relative phrase | Working, confirmed in a run |
+| Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | None — a posting carries no date field | Working; every posting is undated |
+| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Reachable; no slug tried returns any posting |
+| BambooHR | `{subdomain}.bamboohr.com/careers/list` | Unconfirmed | Reachable; serves a generic page, no board found |
+| Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | No public board; recommend dropping |
 
-The blocked rows are believed to exist but every host is refused by this environment's
-network egress policy, so none can be crawled or field-verified from here. A run must
-record them as unreached rather than silently skip them.
+Nothing in this table is blocked by network egress. An earlier version marked five
+platforms "blocked by egress"; that was a probing error, and Workday in particular was
+probed on its human-facing board URL instead of its API, which cannot return postings
+however well it connects. Reachable means the host answers — it does not mean a usable
+board was found, which is what Status says. A run still records each board's outcome
+rather than silently skipping it.
 
 Quirks: Lever puts the job title in `text`, not `title`. Greenhouse's list endpoint
-omits `first_published`, so the run fetches each surviving posting's detail endpoint.
-Of the public ATS APIs, only Greenhouse, SmartRecruiters and Recruitee publish an
-updated timestamp as well as a first-published one.
+returns `first_published` and the full description when called with `content=true`, so
+a run needs no per-posting detail fetch. Of the public ATS APIs, only Greenhouse,
+SmartRecruiters and Recruitee publish an updated timestamp as well as a first-published
+one.
+
+Workday takes a POST with a JSON body (`{"appliedFacets":{},"limit":20,"offset":0,
+"searchText":""}`) and returns `jobPostings` carrying `title`, `locationsText`,
+`externalPath` and `postedOn`; the posting URL is the board URL plus `externalPath`.
+`postedOn` is always present but relative: an exact age under 30 days ("Posted Today",
+"Posted 7 Days Ago"), with everything older collapsed into "Posted 30+ Days Ago". Read
+the exact forms as a date. "30+ Days Ago" yields no date, so the posting is undated —
+it qualifies and ranks last, which is what dropping the posted-date requirement bought.
 
 Pinpoint's `postings.json` supersedes a deprecated `jobs.json`, which returned only the
 primary posting per job. The `posted_at` field seen in research came from a third-party
@@ -58,15 +70,18 @@ Named companies whose postings we want, and the board each one actually posts to
 | --- | --- | --- | --- |
 | Knix — Toronto, Remote Canada only | Lever | `api.lever.co/v0/postings/knix?mode=json` | Crawlable; `createdAt` confirmed |
 | Mejuri — Toronto, Remote Canada only | Greenhouse | `boards-api.greenhouse.io/v1/boards/mejuri/jobs` | Crawlable; `first_published` confirmed |
-| Article | Pinpoint | `article.pinpointhq.com/postings.json` | Blocked |
-| Aritzia | Workday | `aritzia.wd3.myworkdayjobs.com/External` | Blocked |
-| Best Buy Canada | Workday | `bestbuycanada.wd3.myworkdayjobs.com/BestBuyCA_Career` | Blocked |
-| lululemon | Self-hosted, not on any platform above | `careers.lululemon.com` | Blocked; platform unidentified |
+| Article | Pinpoint | `article.pinpointhq.com/postings.json` | Crawlable; 10 postings, all undated |
+| Aritzia | Workday | `aritzia.wd3.myworkdayjobs.com`, board `External` | Crawlable; 547 postings, `postedOn` confirmed |
+| Best Buy Canada | Workday | `bestbuycanada.wd3.myworkdayjobs.com`, board `BestBuyCA_Career` | Crawlable; 131 postings, `postedOn` confirmed |
+| lululemon | Self-hosted, not on any platform above | `careers.lululemon.com` | Platform unidentified; not crawlable |
 | Endy — Toronto, Remote Canada only | Unknown, careers page on own domain | `ca.endy.com/pages/careers` | Not reachable as an ATS board |
 
 lululemon sits on no platform listed here, so the crawler as specced cannot reach it.
 The login path under `en_US/careers` hints at Oracle or Avature rather than Workday,
 but that is a guess from a URL shape and needs the page source to confirm.
+
+A Workday company board is a host plus a board name, not one URL: both are needed to
+build the API path, so the table records them separately.
 
 ### Slug discovery
 
