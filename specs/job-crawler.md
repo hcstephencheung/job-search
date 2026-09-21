@@ -30,6 +30,7 @@ A scheduled task runs nightly and updates the job board artifact with the top 50
 - **Schedule:** 6:00 PM Vancouver time daily, year-round (01:00 UTC during PDT, 02:00 UTC during PST)
 - **Output:** top 50 new jobs, never shown on a previous night, each with its posting link
 - **Inputs each run:** this spec and the Algorithm spec, read fresh by link
+- **Run order:** slug discovery first, then the crawl (see Slug discovery in the Algorithm spec)
 - **Sourcing, filtering and ranking:** defined only in the Algorithm spec
 
 ## Seen jobs
@@ -52,6 +53,7 @@ The board is published at [Nightly Fifty](https://claude.ai/artifact/XZCbzgNH52F
 
 - **nights/\<YYYY-MM-DD>** (one doc per run): `runDate`, `runAt` (ISO time), `sourcesChecked` (board names), `stats` {`fetched`, `qualified`}, `jobs` (array, ranked)
 - **Each job:** `rank`, `title`, `url` (required); `company`, `board`, `location`, `remote` (true/false), `postedDate` (YYYY-MM-DD), `salary` {`min`, `max`, `currency`}, `stackMatch` (list), `description` (max 1,200 chars)
+- **slugs/\<slug>:\<jobBoard>** (one doc per company-board pair, written by slug discovery): `slug`, `jobBoard`, `companyName`
 - **seen/\<hash>** (one doc per job; hash is the first 32 hex characters of the URL's SHA-256): `url`, `title`, `company`, `firstShown` (YYYY-MM-DD)
 - Only the owner or editors can write; the page shows the latest 30 nights.
 
