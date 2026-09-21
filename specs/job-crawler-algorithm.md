@@ -11,34 +11,25 @@ sourced from a platform when the run read it from that platform's API, whatever
 domain the posting link lands on — companies on Greenhouse often serve postings
 from their own careers domain with a `gh_jid` parameter, and those still qualify.
 
-### Working platforms
+| Platform | Endpoint | Posted date | Status |
+| --- | --- | --- | --- |
+| Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs`, then `/jobs/{id}` for detail | `first_published` (ISO 8601) | Working, confirmed in a run |
+| Lever | `api.lever.co/v0/postings/{slug}?mode=json` | `createdAt` (epoch milliseconds) | Working, confirmed in a run |
+| Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) | Working, confirmed in a run |
+| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Blocked by egress |
+| Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | Unconfirmed — Pinpoint's docs do not list posting fields | Blocked by egress |
+| BambooHR | Public JSON endpoints exist, URL unconfirmed | Unconfirmed; list API exposes no posted date | Blocked by egress |
+| Workday | `{org}.wd3.myworkdayjobs.com/{board}` | Rarely shown on postings, often only "30+ days ago" | Blocked by egress; dropped as a source |
+| Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | Blocked by egress; recommend dropping |
 
-Reachable from the crawler and confirmed in a run.
-
-| Platform | Endpoint | Posted date |
-| --- | --- | --- |
-| Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs`, then `/jobs/{id}` for detail | `first_published` (ISO 8601) |
-| Lever | `api.lever.co/v0/postings/{slug}?mode=json` | `createdAt` (epoch milliseconds) |
-| Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) |
+The blocked rows are believed to exist but every host is refused by this environment's
+network egress policy, so none can be crawled or field-verified from here. A run must
+record them as unreached rather than silently skip them.
 
 Quirks: Lever puts the job title in `text`, not `title`. Greenhouse's list endpoint
 omits `first_published`, so the run fetches each surviving posting's detail endpoint.
 Of the public ATS APIs, only Greenhouse, SmartRecruiters and Recruitee publish an
 updated timestamp as well as a first-published one.
-
-### Blocked platforms
-
-Endpoints believed to exist, but every host below is refused by this environment's
-network egress policy, so none can be crawled or field-verified from here. A run must
-record them as unreached rather than silently skip them.
-
-| Platform | Endpoint | Posted date | Status |
-| --- | --- | --- | --- |
-| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Blocked |
-| Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | Unconfirmed — Pinpoint's docs do not list posting fields | Blocked |
-| BambooHR | Public JSON endpoints exist, URL unconfirmed | Unconfirmed | Blocked; list API exposes no posted date |
-| Workday | `{org}.wd3.myworkdayjobs.com/{board}` | Not checked | Blocked; dropped 2026-09-19 |
-| Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | Blocked; recommend dropping |
 
 Pinpoint's `postings.json` supersedes a deprecated `jobs.json`, which returned only the
 primary posting per job. The `posted_at` field seen in research came from a third-party
@@ -111,11 +102,3 @@ Signals, weighted most to least:
 ## Open questions
 
 - None right now.
-
-## Changelog
-
-- 2026-09-19: Created with sources, disqualifiers and provisional ranking.
-- 2026-09-19: Resolved open questions: midpoint pay threshold ($180k CAD, $120k USD, no conversion), Workday "30+ days ago" disqualified, stack match weighs over pay.
-- 2026-09-19: Dropped Workday as a source (its postings rarely show a posted date).
-- 2026-09-21: Rewrote Sources from the Job board timestamp fields research. Split the platform list into working (Greenhouse, Lever, Ashby — all three posted-date fields confirmed in a run) and blocked (SmartRecruiters, Pinpoint, BambooHR, Workday, Jobvite), added the aggregator table as a discovery-only tier, and added named company boards. Recorded that a source is defined by the API a posting was read from, not by the link's domain, since Greenhouse serves many postings from company careers domains.
-- 2026-09-21: Added the slug-discovery rule after a run reported 76 board failures that were 72 wrong slugs and 4 egress blocks, indistinguishable in the log.
