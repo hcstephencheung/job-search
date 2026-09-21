@@ -19,7 +19,7 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Blocked by egress |
 | Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | Unconfirmed — Pinpoint's docs do not list posting fields | Blocked by egress |
 | BambooHR | Public JSON endpoints exist, URL unconfirmed | Unconfirmed; list API exposes no posted date | Blocked by egress |
-| Workday | `{org}.wd3.myworkdayjobs.com/{board}` | Rarely shown on postings, often only "30+ days ago" | Blocked by egress; dropped as a source |
+| Workday | `{org}.wd3.myworkdayjobs.com/{board}` | Rarely shown on postings, often only "30+ days ago" | Blocked by egress |
 | Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | Blocked by egress; recommend dropping |
 
 The blocked rows are believed to exist but every host is refused by this environment's
@@ -91,8 +91,7 @@ than a single list of sources checked.
 
 A job is dropped if any of these apply:
 
-- Posted date is older than 3 months before the run date
-- No posted date
+- Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
 - Fails the level or location rules in the main spec
 
@@ -104,7 +103,7 @@ Signals, weighted most to least:
 
 1. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
 2. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
-3. **Recency:** newer posted date ranks higher
+3. **Recency:** newer posted date ranks higher; undated postings rank last
 
 **Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given):
 
