@@ -68,6 +68,9 @@ Named companies whose postings we want, and the board each one actually posts to
 
 | Company | Platform | Board | Status |
 | --- | --- | --- | --- |
+| Wealthsimple — Remote Canada | Ashby | `api.ashbyhq.com/posting-api/job-board/wealthsimple` | Crawlable; 44 postings, 38 Remote Canada |
+| Jane Software | Ashby | `api.ashbyhq.com/posting-api/job-board/jane` | Crawlable; 21 postings, all Remote Canada |
+| Jobber — Edmonton, Toronto, Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/jobber` | Crawlable; 40 postings, all Canadian |
 | Knix — Toronto, Remote Canada only | Lever | `api.lever.co/v0/postings/knix?mode=json` | Crawlable; `createdAt` confirmed |
 | Mejuri — Toronto, Remote Canada only | Greenhouse | `boards-api.greenhouse.io/v1/boards/mejuri/jobs` | Crawlable; `first_published` confirmed |
 | Article | Pinpoint | `article.pinpointhq.com/postings.json` | Crawlable; 10 postings, all undated |
