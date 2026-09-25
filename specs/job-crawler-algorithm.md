@@ -128,21 +128,20 @@ companies with a qualifying engineering role.
 ### Canadian engineering check
 
 Checked once per company and cached in `companies/<slug>` for 30 days. A company has a
-Canadian engineering team when there is evidence of **at least 2** engineers in Canada.
-Evidence, cheapest first:
+Canadian engineering team when any one of these, checked in order, shows it:
 
-1. **The company's own boards.** Each engineering posting in Canada, live or already in
-   `seen/`, counts as one.
-2. **LinkedIn profiles via web search.** Query
-   `"<company>" (engineer OR developer) (Canada OR Toronto OR Vancouver) site:linkedin.com/in`.
-   A profile counts only when its snippet shows the company as current employer, an
-   engineering title, and a Canadian location. A school in Canada is not a location.
+1. **The posting text.** It says the role is open to candidates in Canada ("US or
+   Canada", Canada among the eligible locations).
+2. **The company's own boards.** It has an engineering posting located in Canada, live
+   or already in `seen/`.
+3. **The approvals list.** The company appears in Canada's
+   [Positive LMIA Employers List](https://open.canada.ca/data/dataset/90fed587-1364-4f33-a9ee-208181dc0b97)
+   in any quarter of the last 3 years, for a software occupation (NOC 2011 codes 2173,
+   2174, 2175; NOC 2021 codes 21231, 21232, 21234). The list gives legal names, so
+   match on the company name within the employer name (Findem appears as "Findem
+   Technologies Inc.", Vancouver).
 
-LinkedIn cannot be read directly: the people tab and profiles sit behind a login wall,
-and scraping breaks its terms. Resolve the company's LinkedIn slug first and store it in
-`companies/<slug>` — names collide (`linkedin.com/company/findem` is an unrelated UK
-firm; Findem is `findeminc`). No evidence found is recorded as `unknown`, not `false`,
-and the job stays disqualified.
+No evidence means the job stays disqualified.
 
 ## Ranking
 
