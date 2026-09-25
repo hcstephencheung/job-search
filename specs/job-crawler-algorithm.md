@@ -146,15 +146,13 @@ No evidence means the job stays disqualified.
 
 ## Ranking
 
-Location tier weighs most, then stack match, then pay. Pay is flexible, so no job is excluded for pay.
+Stack match weighs more than pay. Pay is flexible, so no job is excluded for pay.
 
 Signals, weighted most to least:
 
-1. **Location tier:** postings qualified by rule 1 or 2 of Location, then postings
-   qualified by the Canadian engineering check
-2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
-3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
-4. **Recency:** newer posted date ranks higher; undated postings rank last
+1. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
+2. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
+3. **Recency:** newer posted date ranks higher; undated postings rank last
 
 **Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given):
 
