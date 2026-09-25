@@ -111,17 +111,50 @@ A job is dropped if any of these apply:
 
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
-- Fails the level or location rules in the main spec
+- Fails the level rule in the main spec, or the location rule below
+
+## Location
+
+A posting qualifies on location if any of these hold:
+
+1. It lists Metro Vancouver, BC, or is remote within Canada.
+2. It is remote across North America or the Americas.
+3. It is remote in the US, or remote with no country named, **and** the company has an
+   engineering team in Canada. On-site and hybrid roles outside Canada never qualify.
+
+Run the level and title checks before this one, so the team check runs only for
+companies with a qualifying engineering role.
+
+### Canadian engineering check
+
+Checked once per company and cached in `companies/<slug>` for 30 days. A company has a
+Canadian engineering team when there is evidence of **at least 2** engineers in Canada.
+Evidence, cheapest first:
+
+1. **The company's own boards.** Each engineering posting in Canada, live or already in
+   `seen/`, counts as one.
+2. **LinkedIn profiles via web search.** Query
+   `"<company>" (engineer OR developer) (Canada OR Toronto OR Vancouver) site:linkedin.com/in`.
+   A profile counts only when its snippet shows the company as current employer, an
+   engineering title, and a Canadian location. A school in Canada is not a location.
+
+LinkedIn cannot be read directly: the people tab and profiles sit behind a login wall,
+and scraping breaks its terms. Resolve the company's LinkedIn slug first and store it in
+`companies/<slug>` — names collide (`linkedin.com/company/findem` is an unrelated UK
+firm; Findem is `findeminc`). No evidence found is recorded as `unknown`, not `false`,
+and the job stays disqualified.
 
 ## Ranking
 
-Stack match weighs more than pay. Pay is flexible, so no job is excluded for pay.
+Location tier weighs most, then stack match, then pay. Pay is flexible, so no job is excluded for pay.
 
 Signals, weighted most to least:
 
-1. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
-2. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
-3. **Recency:** newer posted date ranks higher; undated postings rank last
+1. **Location tier:** postings qualified by rule 1 or 2 of Location, then postings
+   qualified by the Canadian engineering check
+2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
+3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
+4. **Recency:** newer posted date ranks higher; undated postings rank last
 
 **Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given):
 
