@@ -111,7 +111,38 @@ A job is dropped if any of these apply:
 
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
-- Fails the level or location rules in the main spec
+- Fails the level rule in the main spec, or the location rule below
+
+## Location
+
+A posting qualifies on location if any of these hold:
+
+1. It lists Metro Vancouver, BC, or is remote within Canada.
+2. It is remote across North America or the Americas.
+3. It is remote in the US, or remote with no country named, **and** the company has an
+   engineering team in Canada. On-site and hybrid roles outside Canada never qualify.
+
+Run the level and title checks before this one, so the team check runs only for
+companies with a qualifying engineering role.
+
+### Canadian engineering check
+
+Checked once per company and cached in `companies/<slug>`. A `true` result is kept for
+good and never checked again; a `false` result is rechecked after 30 days. A company has
+a Canadian engineering team when any one of these, checked in order, shows it:
+
+1. **The posting text.** It says the role is open to candidates in Canada ("US or
+   Canada", Canada among the eligible locations).
+2. **The company's own boards.** It has an engineering posting located in Canada, live
+   or already in `seen/`.
+3. **The approvals list.** The company appears in Canada's
+   [Positive LMIA Employers List](https://open.canada.ca/data/dataset/90fed587-1364-4f33-a9ee-208181dc0b97)
+   in any quarter, for a software occupation (NOC 2011 codes 2173,
+   2174, 2175; NOC 2021 codes 21231, 21232, 21234). The list gives legal names, so
+   match on the company name within the employer name (Findem appears as "Findem
+   Technologies Inc.", Vancouver).
+
+No evidence means the job stays disqualified.
 
 ## Ranking
 
