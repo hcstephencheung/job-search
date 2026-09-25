@@ -112,7 +112,18 @@ A job is dropped if any of these apply:
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
 - Description states the employee must reside in the US (e.g. "must reside in the United States", "open to candidates residing in the US")
-- Fails the level rule in the main spec, or the location rule below
+- Fails the level or location rule below
+
+## Level
+
+A posting qualifies on level if either holds:
+
+1. Its title names Senior, Staff or an equivalent (see Levels in the main spec).
+2. Its title names no level, and the description mentions senior or staff, asks for
+   5+ years, or says the level is set after interviews ("level accordingly", "all
+   levels", "regardless of starting level").
+
+Titles marked junior, intern, new grad or similar never qualify.
 
 ## Location
 
