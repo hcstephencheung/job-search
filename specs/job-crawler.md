@@ -4,7 +4,7 @@
 
 ## Purpose
 
-A nightly crawler that updates an artifact with the top 50 job postings matched to me. This spec holds goals, profile and automation.
+A nightly crawler that updates an artifact with every new job posting matched to me, ranked. This spec holds goals, profile and automation.
 
 - **Algorithm spec:** [Sep 2026 job crawler — Algorithm](./job-crawler-algorithm.md) (sources, filters, ranking)
 
@@ -25,17 +25,17 @@ Show Senior to Staff software engineer jobs I can actually take.
 
 ## Automation
 
-A scheduled task runs nightly and updates the job board artifact with the top 50 jobs.
+A scheduled task runs nightly and updates the job board artifact with every new qualifying job, ranked.
 
 - **Schedule:** 6:00 PM Vancouver time daily, year-round (01:00 UTC during PDT, 02:00 UTC during PST)
-- **Output:** top 50 new jobs, never shown on a previous night, each with its posting link
+- **Output:** every qualifying job never shown on a previous night, ranked, each with its posting link. No cap on the count.
 - **Inputs each run:** this spec and the Algorithm spec, read fresh by link
 - **Run order:** slug discovery first, then the crawl (see Slug discovery in the Algorithm spec)
 - **Sourcing, filtering and ranking:** defined only in the Algorithm spec
 
 ## Seen jobs
 
-Jobs shown on earlier nights are saved in a separate store, one document per job. Each run skips any URL already in it, then adds the new 50.
+Jobs shown on earlier nights are saved in a separate store, one document per job. Each run skips any URL already in it, then adds the new ones.
 
 - **Key:** job posting URL, hashed to a document id (first 32 hex characters of its SHA-256)
 - **Value:** the full URL, title, company, date first shown
