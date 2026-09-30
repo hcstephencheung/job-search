@@ -172,7 +172,7 @@ Signals, weighted most to least — each one only breaks ties in the one above:
    | --- | --- |
    | Metro Vancouver | 1.0 |
    | Remote Canada | 1.0 |
-   | On-site or hybrid elsewhere in Canada | 0.75 |
+   | On-site or hybrid elsewhere in Canada | 0.5 |
    | Remote North America or Americas | 0.5 |
    | Remote with no country named, passing the Canadian engineering check | 0.3 |
    | Remote US, passing the Canadian engineering check | 0.25 |
