@@ -129,10 +129,12 @@ Titles marked junior, intern, new grad or similar never qualify.
 
 A posting qualifies on location if any of these hold:
 
-1. It lists Metro Vancouver, BC, or is remote within Canada.
+1. It is in Canada — on-site, hybrid or remote.
 2. It is remote across North America or the Americas.
 3. It is remote in the US, or remote with no country named, **and** the company has an
    engineering team in Canada. On-site and hybrid roles outside Canada never qualify.
+
+A posting with no location counts as remote with no country named.
 
 Run the level and title checks before this one, so the team check runs only for
 companies with a qualifying engineering role.
@@ -158,13 +160,26 @@ No evidence means the job stays disqualified.
 
 ## Ranking
 
-Stack match weighs more than pay. Pay is flexible, so no job is excluded for pay.
+Location weighs most, then stack match, then pay. Pay is flexible, so no job is excluded
+for pay.
 
-Signals, weighted most to least:
+Signals, weighted most to least — each one only breaks ties in the one above:
 
-1. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
-2. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
-3. **Recency:** newer posted date ranks higher; undated postings rank last
+1. **Location score:** highest first. A posting listing several locations takes its
+   highest score.
+
+   | Location | Score |
+   | --- | --- |
+   | Metro Vancouver | 1.0 |
+   | Remote Canada | 1.0 |
+   | On-site or hybrid elsewhere in Canada | 0.75 |
+   | Remote North America or Americas | 0.5 |
+   | Remote with no country named, passing the Canadian engineering check | 0.3 |
+   | Remote US, passing the Canadian engineering check | 0.25 |
+
+2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
+3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
+4. **Recency:** newer posted date ranks higher; undated postings rank last
 
 **Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given):
 
