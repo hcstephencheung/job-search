@@ -174,7 +174,7 @@ Signals, weighted most to least — each one only breaks ties in the one above:
    | Remote Canada | 1.0 |
    | Remote North America or Americas | 0.5 |
    | Remote with no country named, passing the Canadian engineering check | 0.5 |
-   | On-site or hybrid elsewhere in Canada | 0.1 |
+   | On-site or hybrid elsewhere in Canada | 0.5 |
    | Remote US, passing the Canadian engineering check | 0.1 |
 
 2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
