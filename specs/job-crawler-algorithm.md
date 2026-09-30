@@ -173,9 +173,9 @@ Signals, weighted most to least — each one only breaks ties in the one above:
    | Metro Vancouver | 1.0 |
    | Remote Canada | 1.0 |
    | Remote North America or Americas | 0.5 |
-   | Remote with no country named, passing the Canadian engineering check | 0.4 |
-   | On-site or hybrid elsewhere in Canada | 0.3 |
-   | Remote US, passing the Canadian engineering check | 0.25 |
+   | Remote with no country named, passing the Canadian engineering check | 0.5 |
+   | On-site or hybrid elsewhere in Canada | 0.1 |
+   | Remote US, passing the Canadian engineering check | 0.1 |
 
 2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
 3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
