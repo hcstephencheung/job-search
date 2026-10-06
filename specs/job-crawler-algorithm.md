@@ -49,14 +49,14 @@ aggregator's normalised schema, not Pinpoint's raw output — same caveat as Bam
 
 ### Aggregators
 
-Not sources, and never the date the 3-month rule runs on. Use them only to discover
-which companies are hiring, then crawl that company's own ATS board for the
+Not sources, and never the date the 3-month rule runs on. Slug discovery reads them
+only to find which companies are hiring, then crawls that company's own ATS board for the
 authoritative posting and date. None publishes an official public API.
 
 | Aggregator | Scope | Dates shown |
 | --- | --- | --- |
 | [Built In Vancouver](https://builtinvancouver.org/jobs) | Vancouver tech and startup roles | Not confirmed |
-| [startup.jobs](https://startup.jobs/locations/vancouver) | Startups, Vancouver filter | Full UTC timestamp to the second — best granularity found |
+| [startup.jobs](https://startup.jobs/locations/vancouver) | Startups, Vancouver filter | Full UTC timestamp to the second; blocks non-browser requests (403) since 2026-10 |
 | [Y Combinator](https://www.ycombinator.com/jobs/location/vancouver) | YC startups, Vancouver filter | Not confirmed |
 | [Top Startups](https://topstartups.io/jobs/?job_location=Vancouver) | Startups, Vancouver filter | Not confirmed |
 | [Wellfound](https://wellfound.com/location/vancouver) | Startup and tech roles | Not confirmed; blocks non-browser requests (403) |
@@ -71,6 +71,7 @@ Named companies whose postings we want, and the board each one actually posts to
 | Wealthsimple — Remote Canada | Ashby | `api.ashbyhq.com/posting-api/job-board/wealthsimple` | Crawlable; 44 postings, 38 Remote Canada |
 | Jane Software | Ashby | `api.ashbyhq.com/posting-api/job-board/jane` | Crawlable; 21 postings, all Remote Canada |
 | Jobber — Edmonton, Toronto, Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/jobber` | Crawlable; 40 postings, all Canadian |
+| Spare — Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/spare` | Crawlable; 2 postings, both Vancouver |
 | Knix — Toronto, Remote Canada only | Lever | `api.lever.co/v0/postings/knix?mode=json` | Crawlable; `createdAt` confirmed |
 | Mejuri — Toronto, Remote Canada only | Greenhouse | `boards-api.greenhouse.io/v1/boards/mejuri/jobs` | Crawlable; `first_published` confirmed |
 | Article | Pinpoint | `article.pinpointhq.com/postings.json` | Crawlable; 10 postings, all undated |
@@ -88,18 +89,23 @@ build the API path, so the table records them separately.
 
 ### Slug discovery
 
-Slug discovery runs first, before every crawl. The company list is hand-maintained and a
-wrong slug is indistinguishable from an outage: on 2026-09-20, 72 of 76 board failures
-were guessed slugs that returned 404, while 4 were egress blocks.
+Slug discovery runs first, before every crawl. A wrong slug is indistinguishable from an
+outage: on 2026-09-20, 72 of 76 board failures were guessed slugs that returned 404.
 
 Each run, in order:
 
-1. **Discover.** Resolve every company under Company boards to its board and slug —
-   confirming pairs already in the slug table still answer, and resolving any company
-   that has no slug yet.
-2. **Store.** Write each confirmed pair to the slug table (see Job board data in the
+1. **Find.** Look for hiring companies not yet in the slug table:
+   - Web-search each ATS domain for engineering postings in Vancouver or Canada —
+     `site:jobs.ashbyhq.com`, `site:job-boards.greenhouse.io`, `site:boards.greenhouse.io`
+     and `site:jobs.lever.co`, each with "Vancouver" and with "Canada". A result URL
+     gives the slug directly (`jobs.ashbyhq.com/<slug>/…`).
+   - Read the aggregators above for company names.
+2. **Discover.** Resolve every company under Company boards and every company found in
+   step 1 to its board and slug — confirming pairs already in the slug table still
+   answer, and resolving any company that has no slug yet.
+3. **Store.** Write each confirmed pair to the slug table (see Job board data in the
    main spec), keyed by `<slug>:<jobBoard>`.
-3. **Crawl.** Fetch postings only for pairs in the slug table. A slug that did not
+4. **Crawl.** Fetch postings only for pairs in the slug table. A slug that did not
    resolve is never guessed at.
 
 A run reports each board's outcome separately — reached, 404, or unreachable — rather
