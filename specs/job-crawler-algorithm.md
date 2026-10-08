@@ -18,8 +18,8 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) | Working, confirmed in a run |
 | Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `postedOn`, a relative phrase | Working, confirmed in a run |
 | Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | None — a posting carries no date field | Working; every posting is undated |
-| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Reachable; no slug tried returns any posting |
-| BambooHR | `{subdomain}.bamboohr.com/careers/list` | Unconfirmed | Reachable; serves a generic page, no board found |
+| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Working; Equinox returns 731 postings |
+| BambooHR | `{subdomain}.bamboohr.com/careers/list` (JSON, postings under `result`) | None — the list carries no date field | Working; every posting is undated |
 | Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | No public board; recommend dropping |
 
 Nothing in this table is blocked by network egress. An earlier version marked five
@@ -72,11 +72,28 @@ Named companies whose postings we want, and the board each one actually posts to
 | Jane Software | Ashby | `api.ashbyhq.com/posting-api/job-board/jane` | Crawlable; 21 postings, all Remote Canada |
 | Jobber — Edmonton, Toronto, Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/jobber` | Crawlable; 40 postings, all Canadian |
 | Spare — Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/spare` | Crawlable; 2 postings, both Vancouver |
+| Gumloop — San Francisco, Vancouver | Ashby | `api.ashbyhq.com/posting-api/job-board/gumloop` | Crawlable; 12 postings, Vancouver as a secondary location |
+| Prenuvo | Greenhouse | `boards-api.greenhouse.io/v1/boards/prenuvo/jobs` | Crawlable; 65 postings, 12 Vancouver |
+| DoorDash Canada | Greenhouse | `boards-api.greenhouse.io/v1/boards/doordashcanada/jobs` | Crawlable; 35 postings, all Canadian, 12 Vancouver |
+| EviSmart | Greenhouse | `boards-api.greenhouse.io/v1/boards/evismart/jobs` | Crawlable; 16 postings, 10 Vancouver |
+| Fanatics Commerce | Greenhouse | `boards-api.greenhouse.io/v1/boards/fanaticscommerce/jobs` | Crawlable; 203 postings, 3 Canadian |
+| Sonder (sonder.io) | Greenhouse | `boards-api.greenhouse.io/v1/boards/sonderaustralia/jobs` | Crawlable; 42 postings, 10 Canadian |
+| Thrive Digital | Greenhouse | `boards-api.greenhouse.io/v1/boards/thrivedigital/jobs` | Crawlable; 7 postings, 4 Canadian |
+| Myodetox | Lever | `api.lever.co/v0/postings/myodetox?mode=json` | Crawlable; 46 postings, mostly clinic roles |
+| Mednow | Lever | `api.lever.co/v0/postings/mednow?mode=json` | Crawlable; 3 postings, all Canadian |
+| Equinox+ | SmartRecruiters | `api.smartrecruiters.com/v1/companies/Equinox/postings` | Crawlable; 731 postings, 5 Canadian |
+| Monark — White Rock, BC | BambooHR | `monark.bamboohr.com/careers/list` | Crawlable; 5 postings, all BC |
+| Molecular You — Vancouver | BambooHR | `molecularyou.bamboohr.com/careers/list` | Crawlable; 4 postings, 3 BC |
 | Knix — Toronto, Remote Canada only | Lever | `api.lever.co/v0/postings/knix?mode=json` | Crawlable; `createdAt` confirmed |
 | Mejuri — Toronto, Remote Canada only | Greenhouse | `boards-api.greenhouse.io/v1/boards/mejuri/jobs` | Crawlable; `first_published` confirmed |
 | Article | Pinpoint | `article.pinpointhq.com/postings.json` | Crawlable; 10 postings, all undated |
 | Aritzia | Workday | `aritzia.wd3.myworkdayjobs.com`, board `External` | Crawlable; 547 postings, `postedOn` confirmed |
 | Best Buy Canada | Workday | `bestbuycanada.wd3.myworkdayjobs.com`, board `BestBuyCA_Career` | Crawlable; 131 postings, `postedOn` confirmed |
+| Remitly | Workday | `remitly.wd5.myworkdayjobs.com`, board `Remitly_Careers` | Crawlable; 156 postings, 21 Vancouver area |
+| TELUS Health | Workday | `lifeworks.wd3.myworkdayjobs.com`, board `External` | Crawlable; 172 postings, 70 Canadian |
+| TRIUMF | Workday | `triumf.wd10.myworkdayjobs.com`, board `careers-at-triumf-job-postings` | Crawlable; 6 postings, all Vancouver |
+| Dexcom | Workday | `dexcom.wd1.myworkdayjobs.com`, board `Dexcom` | Crawlable; 280 postings, 2 Vancouver |
+| ABC Fitness Solutions | Workday | `abcfinancial.wd5.myworkdayjobs.com`, board `ABCFinancialServices` | Crawlable; 37 postings, 1 Canadian |
 | lululemon | Self-hosted, not on any platform above | `careers.lululemon.com` | Platform unidentified; not crawlable |
 | Endy — Toronto, Remote Canada only | Unknown, careers page on own domain | `ca.endy.com/pages/careers` | Not reachable as an ATS board |
 
