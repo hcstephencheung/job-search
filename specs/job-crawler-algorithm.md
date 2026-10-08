@@ -139,12 +139,15 @@ A job is dropped if any of these apply:
 
 ## Level
 
-A posting qualifies on level if either holds:
+A posting qualifies on level if any of these hold:
 
 1. Its title names Senior, Staff or an equivalent (see Levels in the main spec).
 2. Its title names no level, and the description mentions senior or staff, asks for
    5+ years, or says the level is set after interviews ("level accordingly", "all
    levels", "regardless of starting level").
+3. It is mid level — its title names no level or a mid level ("Intermediate", "Mid",
+   "II") and rule 2 does not apply — and its posted pay midpoint meets the pay
+   threshold (see Ranking). A mid-level posting with no pay posted is dropped.
 
 Titles marked junior, intern, new grad or similar never qualify.
 
@@ -183,8 +186,8 @@ No evidence means the job stays disqualified.
 
 ## Ranking
 
-Location weighs most, then stack match, then pay. Pay is flexible, so no job is excluded
-for pay.
+Location weighs most, then stack match, then pay. Pay never excludes a Senior or Staff
+job; it decides only whether a mid-level job qualifies (see Level).
 
 Signals, weighted most to least — each one only breaks ties in the one above:
 
@@ -204,7 +207,8 @@ Signals, weighted most to least — each one only breaks ties in the one above:
 3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
 4. **Recency:** newer posted date ranks higher; undated postings rank last
 
-**Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given):
+**Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given).
+When a posting lists several ranges, use the one for the location it qualified on:
 
 - CAD postings: midpoint $180k CAD or more
 - USD postings: midpoint $120k USD or more, with no currency conversion

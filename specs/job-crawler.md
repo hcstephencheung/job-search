@@ -12,7 +12,7 @@ A nightly crawler that updates an artifact with the top 50 job postings matched 
 
 Show Senior to Staff software engineer jobs I can actually take.
 
-- **Levels:** Senior, Staff, and title equivalents (e.g. Senior II, Lead, Principal)
+- **Levels:** Senior, Staff, and title equivalents (e.g. Senior II, Lead, Principal); mid level only when its posted pay meets the threshold
 - **Locations:** anywhere in Canada, Metro Vancouver preferred; also remote North America roles, and remote US roles at companies with an engineering team in Canada (see Location in the Algorithm spec)
 - **Every job must include a direct link to its posting**
 
