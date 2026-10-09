@@ -134,8 +134,8 @@ A job is dropped if any of these apply:
 
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
-- Description states the employee must reside in the US (e.g. "must reside in the United States", "open to candidates residing in the US")
-- Fails the level or location rule below
+- Description states the employee must reside somewhere that excludes Metro Vancouver (e.g. "must reside in the United States", "open to candidates residing in the US", "must live in the Greater Toronto Area")
+- Fails the level, location or stack rule below
 
 ## Level
 
@@ -184,34 +184,74 @@ a Canadian engineering team when any one of these, checked in order, shows it:
 
 No evidence means the job stays disqualified.
 
+## Stack
+
+An agent reads each posting that has passed every other rule — title and full description —
+and judges its **primary stack**: the languages and frameworks the role mainly works in,
+not ones listed as nice to have or mentioned in passing. It gives each posting a tier:
+
+| Tier | Primary stack | Examples |
+| --- | --- | --- |
+| Strong | TypeScript or JavaScript with React and/or Node, or Python | Fullstack TypeScript, React frontend, Node or Python backend |
+| Partial | TypeScript or JavaScript with another frontend framework | Vue or Angular frontend |
+| None | Anything else | iOS (Swift), Android (Kotlin), .NET / C#, Java, Go, Ruby, C++, embedded, infrastructure-only |
+
+A posting judged **None is dropped**. When a posting accepts several primary languages
+("Go, Python or TypeScript"), judge it on the best one it accepts.
+A split stack — part of the role in a Strong stack and part outside it, such as a
+TypeScript/React frontend with a Java backend — is Partial.
+
+Run the agent in batches (about 25 postings each), returning per posting its URL, primary
+stack, tier and a one-line reason. Store each judgment in `stacks/<hash>` (same hash as
+`seen/`) and reuse it on later nights instead of judging the posting again.
+
 ## Ranking
 
-Location weighs most, then stack match, then pay. Pay never excludes a Senior or Staff
-job; it decides only whether a mid-level job qualifies (see Level).
+Each qualifying job scores out of 100, the sum of four parts below. Highest score ranks
+first; ties go to the newer posted date, with undated postings last.
 
-Signals, weighted most to least — each one only breaks ties in the one above:
+| Part | Max | Points |
+| --- | --- | --- |
+| Location | 30 | See Location points |
+| Pay | 30 | See Pay points |
+| Stack | 25 | Strong 25, Partial 10 (None is dropped — see Stack) |
+| Title | 15 | See Title points |
 
-1. **Location score:** highest first. A posting listing several locations takes its
-   highest score.
+**Location points.** A posting listing several locations takes its highest.
 
-   | Location | Score |
-   | --- | --- |
-   | Metro Vancouver | 1.0 |
-   | Remote Canada | 1.0 |
-   | Remote North America or Americas | 0.5 |
-   | Remote with no country named, passing the Canadian engineering check | 0.5 |
-   | On-site or hybrid elsewhere in Canada | 0.5 |
-   | Remote US, passing the Canadian engineering check | 0.1 |
+| Location | Points |
+| --- | --- |
+| Metro Vancouver | 30 |
+| Remote Canada | 30 |
+| Remote North America or Americas | 15 |
+| Remote with no country named, passing the Canadian engineering check | 15 |
+| On-site or hybrid elsewhere in Canada | 15 |
+| Remote US, passing the Canadian engineering check | 3 |
 
-2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
-3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
-4. **Recency:** newer posted date ranks higher; undated postings rank last
+**Pay points** use the midpoint of the posted range, or the single figure if only one is
+given. When a posting lists several ranges, use the one for the location it qualified
+on. Convert hourly pay at 2,080 hours a year, daily at 260 days and monthly at 12 months.
+Partial $10k steps round in the job's favour.
 
-**Pay threshold** uses the midpoint of the posted range (or the single figure if only one is given).
-When a posting lists several ranges, use the one for the location it qualified on:
+| Midpoint | Points |
+| --- | --- |
+| CA$200k or more, or US$140k or more | 30 |
+| CA$180k–200k, or US$120k–140k | 28, plus 1 per $10k above CA$180k or US$120k |
+| Below CA$180k, or below US$120k | 20, minus 1 per full $10k below |
+| Not posted, or in another currency | 20 |
 
-- CAD postings: midpoint $180k CAD or more
-- USD postings: midpoint $120k USD or more, with no currency conversion
+**Pay threshold** — the bar a mid-level job must meet (see Level) — is a midpoint of
+CA$170k or US$120k, with no currency conversion.
+
+**Title points.**
+
+| Title | Points |
+| --- | --- |
+| Senior or Staff | 15 |
+| No level in the title, qualifying through the description (Level rule 2) | 15 |
+| Lead, Principal, Architect or Distinguished | 10 |
+| Mid level (Level rule 3) | 10 |
+| Any posting asking for 15+ years of experience | 10 |
 
 ## Open questions
 
