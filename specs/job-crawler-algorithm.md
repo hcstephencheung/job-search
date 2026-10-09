@@ -200,6 +200,7 @@ A posting judged **None is dropped**. When a posting accepts several primary lan
 ("Go, Python or TypeScript"), judge it on the best one it accepts.
 A split stack — part of the role in a Strong stack and part outside it, such as a
 TypeScript/React frontend with a Java backend — is Partial.
+A posting that names no stack, so it cannot be judged, is also Partial, not dropped.
 
 Run the agent in batches (about 25 postings each), returning per posting its URL, primary
 stack, tier and a one-line reason. Store each judgment in `stacks/<hash>` (same hash as
