@@ -239,7 +239,7 @@ Partial $10k steps round in the job's favour.
 | Not posted, or in another currency | 20 |
 
 **Pay threshold** — the bar a mid-level job must meet (see Level) — is a midpoint of
-CA$180k or US$120k, with no currency conversion.
+CA$170k or US$120k, with no currency conversion.
 
 **Title points.**
 
