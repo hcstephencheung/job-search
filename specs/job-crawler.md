@@ -52,7 +52,7 @@ Jobs shown on earlier nights are saved in a separate store, one document per job
 The board is published at [Nightly Fifty](https://claude.ai/artifact/XZCbzgNH52FHnBRPNePS25). The nightly run writes to its database; the page never needs republishing.
 
 - **nights/\<YYYY-MM-DD>** (one doc per run): `runDate`, `runAt` (ISO time), `boards` (one entry per slug-board pair: `slug`, `jobBoard`, `company`, `outcome` — reached, 404 or unreachable — and `postings`), `discovery` {`found` (new companies from the Find step), `candidates`, `resolved`, `notFound`, `unreachable`}, `stats` {`fetched`, `qualified`}, `jobs` (array, ranked)
-- **Each job:** `rank`, `title`, `url` (required); `company`, `board`, `location`, `remote` (true/false), `postedDate` (YYYY-MM-DD), `salary` {`min`, `max`, `currency`}, `stackMatch` (primary stack, list), `stackTier` (strong or partial), `description` (max 1,200 chars), `canadianEng` (true/false)
+- **Each job:** `rank`, `title`, `url` (required); `company`, `board`, `location`, `remote` (true/false), `postedDate` (YYYY-MM-DD), `salary` {`min`, `max`, `currency`}, `stackMatch` (primary stack, list), `stackTier` (strong or partial), `score` (0–100), `description` (max 1,200 chars), `canadianEng` (true/false)
 - **slugs/\<slug>:\<jobBoard>** (one doc per company-board pair, written by slug discovery): `slug`, `jobBoard`, `companyName`
 - **companies/\<slug>** (one doc per company checked for a Canadian engineering team): `companyName`, `canadianEng` (true or false), `evidence` (posting URL or approvals-list row), `checkedAt` (YYYY-MM-DD)
 - **stacks/\<hash>** (one doc per judged posting; same hash as seen): `url`, `primaryStack` (list), `tier` (strong, partial or none), `reason`, `judgedAt` (YYYY-MM-DD)
