@@ -198,6 +198,8 @@ not ones listed as nice to have or mentioned in passing. It gives each posting a
 
 A posting judged **None is dropped**. When a posting accepts several primary languages
 ("Go, Python or TypeScript"), judge it on the best one it accepts.
+A split stack — part of the role in a Strong stack and part outside it, such as a
+TypeScript/React frontend with a Java backend — is Partial.
 
 Run the agent in batches (about 25 postings each), returning per posting its URL, primary
 stack, tier and a one-line reason. Store each judgment in `stacks/<hash>` (same hash as
