@@ -192,8 +192,8 @@ not ones listed as nice to have or mentioned in passing. It gives each posting a
 
 | Tier | Primary stack | Examples |
 | --- | --- | --- |
-| Strong | TypeScript or JavaScript with React and/or Node | Fullstack TypeScript, React frontend, Node backend |
-| Partial | Python, or TypeScript with another frontend framework | Python backend, Vue or Angular frontend |
+| Strong | TypeScript or JavaScript with React and/or Node, or Python | Fullstack TypeScript, React frontend, Node or Python backend |
+| Partial | TypeScript or JavaScript with another frontend framework | Vue or Angular frontend |
 | None | Anything else | iOS (Swift), Android (Kotlin), .NET / C#, Java, Go, Ruby, C++, embedded, infrastructure-only |
 
 A posting judged **None is dropped**. When a posting accepts several primary languages
