@@ -135,7 +135,7 @@ A job is dropped if any of these apply:
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
 - Description states the employee must reside in the US (e.g. "must reside in the United States", "open to candidates residing in the US")
-- Fails the level or location rule below
+- Fails the level, location or stack rule below
 
 ## Level
 
@@ -184,9 +184,28 @@ a Canadian engineering team when any one of these, checked in order, shows it:
 
 No evidence means the job stays disqualified.
 
+## Stack
+
+An agent reads each posting that has passed every other rule — title and full description —
+and judges its **primary stack**: the languages and frameworks the role mainly works in,
+not ones listed as nice to have or mentioned in passing. It gives each posting a tier:
+
+| Tier | Primary stack | Examples |
+| --- | --- | --- |
+| Strong | TypeScript or JavaScript with React and/or Node | Fullstack TypeScript, React frontend, Node backend |
+| Partial | Python, or TypeScript with another frontend framework | Python backend, Vue or Angular frontend |
+| None | Anything else | iOS (Swift), Android (Kotlin), .NET / C#, Java, Go, Ruby, C++, embedded, infrastructure-only |
+
+A posting judged **None is dropped**. When a posting accepts several primary languages
+("Go, Python or TypeScript"), judge it on the best one it accepts.
+
+Run the agent in batches (about 25 postings each), returning per posting its URL, primary
+stack, tier and a one-line reason. Store each judgment in `stacks/<hash>` (same hash as
+`seen/`) and reuse it on later nights instead of judging the posting again.
+
 ## Ranking
 
-Location weighs most, then stack match, then pay. Pay never excludes a Senior or Staff
+Location weighs most, then stack tier, then pay. Pay never excludes a Senior or Staff
 job; it decides only whether a mid-level job qualifies (see Level).
 
 Signals, weighted most to least — each one only breaks ties in the one above:
@@ -203,7 +222,7 @@ Signals, weighted most to least — each one only breaks ties in the one above:
    | On-site or hybrid elsewhere in Canada | 0.5 |
    | Remote US, passing the Canadian engineering check | 0.1 |
 
-2. **Stack match:** stronger match to TypeScript, React + Node (and Python) ranks higher
+2. **Stack tier:** Strong before Partial (see Stack)
 3. **Pay tier:** pay posted and meets the threshold, then pay posted below it, then no pay posted
 4. **Recency:** newer posted date ranks higher; undated postings rank last
 
