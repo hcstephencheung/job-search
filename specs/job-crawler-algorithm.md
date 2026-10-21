@@ -52,8 +52,9 @@ created, not published: use it as the posted date, but treat a posting created m
 9 months before the run date as undated — it passes the date rule and loses ties on
 recency.
 
-Read the board page `careers.kula.ai/{slug}`, which embeds a `jobs` list (id, title, `launch_at`, and offices
-with country and remote/hybrid). Each posting lives at `careers.kula.ai/{slug}/{id}-…`;
+For Kula, read the board page `careers.kula.ai/{slug}`, which embeds a `jobs` list (id,
+title, `launch_at`, and offices with country and remote/hybrid). Each posting lives at
+`careers.kula.ai/{slug}/{id}-…`;
 its JobPosting structured data (`application/ld+json`) gives `datePosted`, the full
 `description` and `applicantLocationRequirements`. Pay appears only in the description
 text. Fetch posting pages only for titles that pass the title filter.
