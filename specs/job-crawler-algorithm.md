@@ -54,10 +54,10 @@ recency.
 
 For Kula, read the board page `careers.kula.ai/{slug}`, which embeds a `jobs` list (id,
 title, `launch_at`, and offices with country and remote/hybrid). Each posting lives at
-`careers.kula.ai/{slug}/{id}-…`;
-its JobPosting structured data (`application/ld+json`) gives `datePosted`, the full
-`description` and `applicantLocationRequirements`. Pay appears only in the description
-text. Fetch posting pages only for titles that pass the title filter.
+`careers.kula.ai/{slug}/{id}-…`; its JobPosting structured data (`application/ld+json`)
+gives `datePosted`, the full `description` and `applicantLocationRequirements`. Pay
+appears only in the description text. Fetch posting pages only for titles that pass the
+title filter.
 
 Pinpoint's `postings.json` supersedes a deprecated `jobs.json`, which returned only the
 primary posting per job. The `posted_at` field seen in research came from a third-party
