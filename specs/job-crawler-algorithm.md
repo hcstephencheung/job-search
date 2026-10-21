@@ -19,7 +19,7 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 | Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `startDate` (ISO date), from the posting detail | Working, confirmed in a run |
 | Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | None — a posting carries no date field | Working; every posting is undated |
 | Rippling | `api.rippling.com/platform/api/ats/v1/board/{slug}/jobs` | `createdOn` (ISO 8601), from the posting detail | Working, confirmed on Boosted |
-| Kula | `careers.kula.ai/{slug}` (board page; no public API) | `datePosted` (ISO 8601), from the posting page | Working, confirmed on Swiftly |
+| Kula | `careers.kula.ai/{slug}` (board page) | `datePosted` (ISO 8601), from the posting page | Working, confirmed on Swiftly |
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Working; Equinox returns 731 postings |
 | BambooHR | `{subdomain}.bamboohr.com/careers/list` (JSON, postings under `result`) | None — the list carries no date field | Working; every posting is undated |
 | Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | No public board; recommend dropping |
@@ -52,8 +52,7 @@ created, not published: use it as the posted date, but treat a posting created m
 9 months before the run date as undated — it passes the date rule and loses ties on
 recency.
 
-Kula has no API a crawler may use — its robots.txt disallows `/api/`. Read the board page
-`careers.kula.ai/{slug}`, which embeds a `jobs` list (id, title, `launch_at`, and offices
+Read the board page `careers.kula.ai/{slug}`, which embeds a `jobs` list (id, title, `launch_at`, and offices
 with country and remote/hybrid). Each posting lives at `careers.kula.ai/{slug}/{id}-…`;
 its JobPosting structured data (`application/ld+json`) gives `datePosted`, the full
 `description` and `applicantLocationRequirements`. Pay appears only in the description
