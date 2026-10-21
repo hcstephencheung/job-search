@@ -18,6 +18,7 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) | Working, confirmed in a run |
 | Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `postedOn`, a relative phrase | Working, confirmed in a run |
 | Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | None — a posting carries no date field | Working; every posting is undated |
+| Rippling | `api.rippling.com/platform/api/ats/v1/board/{slug}/jobs` | `createdOn` (ISO 8601), from the posting detail | Working, confirmed on Boosted |
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Working; Equinox returns 731 postings |
 | BambooHR | `{subdomain}.bamboohr.com/careers/list` (JSON, postings under `result`) | None — the list carries no date field | Working; every posting is undated |
 | Jobvite | No reliable public surface — the API is per-customer and the XML feed is opt-in, usually off | — | No public board; recommend dropping |
@@ -42,6 +43,13 @@ Workday takes a POST with a JSON body (`{"appliedFacets":{},"limit":20,"offset":
 "Posted 7 Days Ago"), with everything older collapsed into "Posted 30+ Days Ago". Read
 the exact forms as a date. "30+ Days Ago" yields no date, so the posting is undated —
 it qualifies and ranks last, which is what dropping the posted-date requirement bought.
+
+Rippling's list gives only title, department, location and URL. Fetch each posting that
+passes the title filter from `ats.rippling.com/api/v2/board/{slug}/jobs/{uuid}` for its
+`description`, `payRangeDetails` and `createdOn`. `createdOn` is when the posting was
+created, not published: use it as the posted date, but treat a posting created more than
+9 months before the run date as undated — it passes the date rule and loses ties on
+recency.
 
 Pinpoint's `postings.json` supersedes a deprecated `jobs.json`, which returned only the
 primary posting per job. The `posted_at` field seen in research came from a third-party
@@ -113,9 +121,10 @@ Each run, in order:
 
 1. **Find.** Look for hiring companies not yet in the slug table:
    - Web-search each ATS domain for engineering postings in Vancouver or Canada —
-     `site:jobs.ashbyhq.com`, `site:job-boards.greenhouse.io`, `site:boards.greenhouse.io`
-     and `site:jobs.lever.co`, each with "Vancouver" and with "Canada". A result URL
-     gives the slug directly (`jobs.ashbyhq.com/<slug>/…`).
+     `site:jobs.ashbyhq.com`, `site:job-boards.greenhouse.io`, `site:boards.greenhouse.io`,
+     `site:jobs.lever.co` and `site:ats.rippling.com`, each with "Vancouver" and with
+     "Canada". A result URL gives the slug directly (`jobs.ashbyhq.com/<slug>/…`,
+     `ats.rippling.com/<slug>/jobs/…`).
    - Read the aggregators above for company names.
 2. **Discover.** Resolve every company under Company boards and every company found in
    step 1 to its board and slug — confirming pairs already in the slug table still
