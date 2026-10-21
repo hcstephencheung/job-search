@@ -16,7 +16,7 @@ from their own careers domain with a `gh_jid` parameter, and those still qualify
 | Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true` | `first_published` (ISO 8601) | Working, confirmed in a run |
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json` | `createdAt` (epoch milliseconds) | Working, confirmed in a run |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{name}?includeCompensation=true` | `publishedAt` (ISO 8601) | Working, confirmed in a run |
-| Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `postedOn`, a relative phrase | Working, confirmed in a run |
+| Workday | `POST {org}.wd3.myworkdayjobs.com/wday/cxs/{org}/{board}/jobs` | `startDate` (ISO date), from the posting detail | Working, confirmed in a run |
 | Pinpoint | `{subdomain}.pinpointhq.com/postings.json` | None — a posting carries no date field | Working; every posting is undated |
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` (pages via `limit`/`offset`) | `releasedDate` (ISO 8601), unconfirmed | Working; Equinox returns 731 postings |
 | BambooHR | `{subdomain}.bamboohr.com/careers/list` (JSON, postings under `result`) | None — the list carries no date field | Working; every posting is undated |
@@ -38,10 +38,10 @@ one.
 Workday takes a POST with a JSON body (`{"appliedFacets":{},"limit":20,"offset":0,
 "searchText":""}`) and returns `jobPostings` carrying `title`, `locationsText`,
 `externalPath` and `postedOn`; the posting URL is the board URL plus `externalPath`.
-`postedOn` is always present but relative: an exact age under 30 days ("Posted Today",
-"Posted 7 Days Ago"), with everything older collapsed into "Posted 30+ Days Ago". Read
-the exact forms as a date. "30+ Days Ago" yields no date, so the posting is undated —
-it qualifies and ranks last, which is what dropping the posted-date requirement bought.
+`postedOn` is only relative ("Posted 7 Days Ago", "Posted 30+ Days Ago"), so take the
+posted date from the posting detail (`GET .../job{externalPath}`), whose
+`jobPostingInfo.startDate` is an exact ISO date — "30+ Days Ago" postings included. The
+same detail fetch gives the description and full location list.
 
 Pinpoint's `postings.json` supersedes a deprecated `jobs.json`, which returned only the
 primary posting per job. The `posted_at` field seen in research came from a third-party
@@ -135,6 +135,7 @@ A job is dropped if any of these apply:
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
 - Description states the employee must reside somewhere that excludes Metro Vancouver (e.g. "must reside in the United States", "open to candidates residing in the US", "must live in the Greater Toronto Area")
+- Description requires an active or obtainable US security clearance (e.g. Secret, TS/SCI, polygraph) and the posting has no Canadian location. A Canadian clearance, or one only "preferred", does not drop it
 - Fails the level, location or stack rule below
 
 ## Level
@@ -149,7 +150,9 @@ A posting qualifies on level if any of these hold:
    "II") and rule 2 does not apply — and its posted pay midpoint meets the pay
    threshold (see Ranking). A mid-level posting with no pay posted is dropped.
 
-Titles marked junior, intern, new grad or similar never qualify.
+Titles marked junior, intern, new grad or similar never qualify, nor do titles naming a
+designer ("Senior Product Designer, Developer Foundations") even when they also say
+engineer or developer.
 
 ## Location
 
