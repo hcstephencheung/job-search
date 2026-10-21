@@ -135,7 +135,7 @@ A job is dropped if any of these apply:
 - Posted date, when the posting gives one, is older than 3 months before the run date
 - No posting link
 - Description states the employee must reside somewhere that excludes Metro Vancouver (e.g. "must reside in the United States", "open to candidates residing in the US", "must live in the Greater Toronto Area")
-- Description requires an active or obtainable US security clearance (e.g. Secret, TS/SCI, polygraph) and the posting has no Canadian location. A Canadian clearance, or one only "preferred", does not drop it
+- Description requires an active or obtainable US security clearance (e.g. Secret, TS/SCI, polygraph)
 - Fails the level, location or stack rule below
 
 ## Level
